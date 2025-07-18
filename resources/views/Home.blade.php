@@ -13,7 +13,7 @@
     <link rel="icon" href="image/logo1.png" type="image/png">
 </head>
 <body>
-  <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">
@@ -21,10 +21,10 @@
       <span>KorinTekno</span>
     </div>
 <div class="nav-links">
-  <a href="home">Home</a>
+  <a href="/"  class="dropdown-button active">Home</a>
   <a href="laptop.html">Laptop</a>
   <div class="dropdown">
-    <a href="computer.html" class="dropdown-button active">PCs</a> <!-- untuk Setiap page, nanti class="active" nya berbeda ya. kalau semisal untuk 'page laptop' nanti bakal jadi gini : <a href="laptop.html" class="active">Laptop</a> -->
+    <a href="computer.html">PCs</a> <!-- untuk Setiap page, nanti class="active" nya berbeda ya. kalau semisal untuk 'page laptop' nanti bakal jadi gini : <a href="laptop.html" class="active">Laptop</a> -->
     <button class="dropdown-btn">
       <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
         <polyline points="6 9 12 15 18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,16 +38,16 @@
       <a href="#">Other...</a>
     </div>
   </div>
-  <a href="contact.html">Contact</a>
+  <a href="contact.html">Deals</a>
 </div>
   <div class="nav-actions">
-      <button class="cart-btn">
+      <a href="checkout"><button class="cart-btn">
         <svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="9" cy="21" r="1" stroke="#fff" stroke-width="2"/>
           <circle cx="19" cy="21" r="1" stroke="#fff" stroke-width="2"/>
         </svg>
-      </button>
+      </button></a>
       <button class="join-btn">Join</button>
     </div>
   </div>
@@ -170,7 +170,7 @@
 
   <section class="category" id="branch">
   <div class="category-magic">
-    <h1 data-aos="fade-up" data-aos-duration="1000">Cabang Toko Kami</h1>
+    <h1 data-aos="fade-up" data-aos-duration="1000">Category</h1>
     <div class="row">
       <div class="category-col" data-aos="fade-left" data-aos-duration="1000">
         <img src="image/gaming1.png">
