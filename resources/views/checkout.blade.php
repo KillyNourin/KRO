@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KorinTekno - Jual Beli Laptop & PC Parts</title>
-    <link rel="stylesheet" href="{{ asset('css/check.css') }}">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/check.css') }}">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
     <link href="https://fonts.bunny.net/css?family=roboto:400,500,700" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=nunito:400,600,700" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=montserrat:400,600,700" rel="stylesheet" />
@@ -52,6 +55,7 @@
         </div>
     </div>
 </nav>
+@include('partials.login'){{-- ngambil login --}}
 <!--checkout starts here -->
 <div class='container'>
   <div class='window'>
