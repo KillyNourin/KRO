@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KorinTekno - Jual Beli Laptop & PC Parts</title>
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.bunny.net/css?family=roboto:400,500,700" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=nunito:400,600,700" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=montserrat:400,600,700" rel="stylesheet" />
     <link href="https://fonts.bunny.net/css?family=urbanist:400,600,700" rel="stylesheet" />
     <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
     <link rel="icon" href="image/logo1.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <!-- Navbar -->
@@ -52,6 +54,7 @@
     </div>
   </div>
 </nav>
+@include('partials.login'){{-- ngambil login --}}
 <!-- Hero Section -->
 <main>
 <section class="hero">
@@ -233,7 +236,6 @@
 <script src="{{ asset('js/script.js') }}" defer></script>
 <script>
   AOS.init();
-
 </script>
 </body>
 </html>
