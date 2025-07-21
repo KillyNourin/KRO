@@ -1,0 +1,180 @@
+/* Fade-in & Fade-out Animation for Page Transition */
+body {
+  opacity: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #bebebe;
+  color: #111;
+  transition: opacity 0.4s ease;
+}
+body.loaded {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0 !important;
+}
+
+/* Section Brand */
+.brand-section {
+  text-align: center;
+  padding: 24px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.brand-section h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.subtitle {
+  color: #444;
+  margin: 8px 0;
+}
+.more-btn {
+  background: #111;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  margin-top: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.more-btn:hover {
+  background: #009cff;
+}
+
+/* Highlight Banner */
+.highlight-banner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  margin: 40px 0;
+  align-items: center;
+  gap: 20px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.highlight-text {
+  flex: 1;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 0;
+}
+.highlight-text h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.highlight-text p {
+  margin-bottom: 15px;
+}
+.highlight-text button {
+  background: #111;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 120px;
+  transition: background 0.3s;
+}
+.highlight-text button:hover {
+  background: #009cff;
+}
+.highlight-img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlight-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Products Grid */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.product-card {
+  background: #fff;
+  padding: 18px 15px 15px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+  position: relative;
+  z-index: 1;
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,156,255,0.15), 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+.product-card img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+.product-card:hover img {
+  transform: scale(1.07);
+}
+.product-card button {
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product-card button:hover {
+  background: #009cff;
+}
+.all-products {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 15px;
+  justify-content: center;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  text-align: center;
+}
+.all-products button {
+  font-size: 24px;
+  padding: 8px 12px;
+  width: 50px;
+  margin: 0 auto;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.all-products button:hover {
+  background: #009cff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .highlight-text {
+    padding: 0 20px;
+  }
+  .products {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

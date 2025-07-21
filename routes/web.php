@@ -17,3 +17,7 @@ Route::get('PCsMb', function () {
 });
 use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/laptop', function () {
+    return view('laptop');
+});
