@@ -57,9 +57,10 @@ body.loaded {
 }
 
 .logo span {
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 600;
   color: #fff;
-  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -87,7 +88,7 @@ body.loaded {
   bottom: 0;
   left: 0;
   height: 4px;
-  width: 130%;
+  width: 100%;
   background: #009cff;
   border-radius: 4px;
 }
