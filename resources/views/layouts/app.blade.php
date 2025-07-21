@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'KorinTekno')</title>
     {{-- favicon --}}
+    <link rel="stylesheet" href="{{ asset('tailwind/output.css') }}">
+    <!-- Kalo mau make tailwind -->
     <link rel="icon" href="{{ asset('image/logo1.png') }}" type="image/png">
     <!-- CSS Global -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
