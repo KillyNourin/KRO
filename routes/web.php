@@ -12,3 +12,5 @@ Route::get('/', function () {
 Route::get('checkout', function () {
     return view('checkout');
 });
+use App\Http\Controllers\HomeController;
+Route::get('/', [HomeController::class, 'index'])->name('home');
