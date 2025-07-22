@@ -19,7 +19,9 @@
 <body>
 
     {{-- Navbar global --}}
-    @include('partials.navbar')
+<header class="fixed top-0 left-0 right-0 z-50">
+            @include('partials.navbar')
+</header>
 
     {{-- Konten halaman --}}
     <main>

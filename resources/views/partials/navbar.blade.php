@@ -18,9 +18,9 @@
           </svg>
         </button>
         <div class="dropdown-menu">
-          <a href="/PC/motherboard">Motherboard</a>
+          <a href="/PCsMb" class="{{ request()->is('PCsMb') ? 'active' : ''}}">Motherboard</a>
           <a href="/PC/gpu">GPU</a>
-          <a href="/PC/processor">Processor</a>
+          <a href="/PC/processor">CPU</a>
           <a href="/PC/psu">Power Supply</a>
         </div>
       </div>
