@@ -61,6 +61,7 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  color: #111;
 }
 .auth-popup .field {
   margin-bottom: 15px;
@@ -92,9 +93,12 @@
 .eye-icon {
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 20px;
   transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #888;
   cursor: pointer;
+  z-index: 2; /* pastikan di atas input */
 }
 .field {
   width: 100%;
@@ -125,7 +129,6 @@
     opacity: 1;
   }
 }
-
 .auth-popup input::placeholder {
   color: #888 !important;
   opacity: 1 !important;

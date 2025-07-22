@@ -10,6 +10,7 @@
 <link href="https://fonts.bunny.net/css?family=montserrat:400,600,700" rel="stylesheet" />
 <link href="https://fonts.bunny.net/css?family=urbanist:400,600,700" rel="stylesheet" />
 <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 <link rel="icon" href="{{ asset('image/logo1.png') }}" type="image/png">
 @endpush
 
