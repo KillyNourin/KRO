@@ -5,7 +5,6 @@
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/check.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
 <link href="https://fonts.bunny.net/css?family=roboto:400,500,700" rel="stylesheet" />
 <link href="https://fonts.bunny.net/css?family=nunito:400,600,700" rel="stylesheet" />
 <link href="https://fonts.bunny.net/css?family=montserrat:400,600,700" rel="stylesheet" />
@@ -29,7 +28,7 @@
             <table class='order-table'>
               <tbody>
                 <tr>
-                  <td><img src='{{ asset('image/gaming1.png') }}' class="full-width"></td>
+                  <td><img src='{{ asset('image/gaming/gaming1.png') }}' class="full-width"></td>
                   <td>
                     <br> <span class='thin'>Asus</span>
                     <br> TUF Gaming A15<br> <span class='thin small'>Color: Black, Size: 2.3kg<br><br></span>
@@ -44,7 +43,7 @@
             <table class='order-table'>
               <tbody>
                 <tr>
-                  <td><img src='{{ asset('image/carousel.avif') }}' class="full-width"></td>
+                  <td><img src='{{ asset('image/carousel.png') }}' class="full-width"></td>
                   <td>
                     <br> <span class='thin'>PC</span>
                     <br>Pre-Build<br> <span class='thin small'>Color: Black, Size: 15kg</span>

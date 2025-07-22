@@ -126,7 +126,10 @@
   }
 }
 
-
+.auth-popup input::placeholder {
+  color: #888 !important;
+  opacity: 1 !important;
+}
 /* checkout */
 h2 {
   margin-bottom:0px;
