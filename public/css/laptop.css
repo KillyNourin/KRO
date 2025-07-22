@@ -2,8 +2,8 @@
 body {
   opacity: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #bebebe;
+  font-family: 'Monseratt', sans-serif;
+  background: #f5f5f5;
   color: #111;
   transition: opacity 0.4s ease;
 }
@@ -17,12 +17,13 @@ body.loaded {
 /* Section Brand */
 .brand-section {
   text-align: center;
-  padding: 24px 0 10px;
+  padding: 20px 0 6px;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom : 10px;
 }
 .brand-section h2 {
   font-size: 30px;
-  margin-bottom: 0;
+  margin-bottom: 6px;
 }
 .subtitle {
   color: #444;
@@ -43,16 +44,29 @@ body.loaded {
 }
 
 /* Highlight Banner */
-.highlight-banner {
+.highlight-banner-asus,
+.highlight-banner-lenovo,
+.highlight-banner-hp {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 20px;
+  padding: 100px 20px;
   margin: 40px 0;
   align-items: center;
   gap: 20px;
   background: #e6e6e6;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+.highlight-banner-asus {
+  background-image: url(/image/laptop/background-asus.png);
+}
+.highlight-banner-lenovo {
+  background-image: url(/image/laptop/lenovo-background.png);
+}
+.highlight-banner-hp {
+  background-image: url(/image/laptop/background-hp.png);
 }
 .highlight-text {
   flex: 1;
@@ -61,6 +75,7 @@ body.loaded {
   flex-direction: column;
   justify-content: center;
   margin: 60px 0;
+  color: #fff;
 }
 .highlight-text h3 {
   font-size: 26px;
@@ -70,8 +85,8 @@ body.loaded {
   margin-bottom: 15px;
 }
 .highlight-text button {
-  background: #111;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 8px 18px;
   border: none;
   border-radius: 5px;
@@ -79,6 +94,7 @@ body.loaded {
   cursor: pointer;
   width: 120px;
   transition: background 0.3s;
+  font-weight: bold;
 }
 .highlight-text button:hover {
   background: #009cff;
@@ -95,12 +111,49 @@ body.loaded {
   border-radius: 8px;
 }
 
+/* Highlight Text Lenovo */
+.highlight-text-lenovo {
+  flex: 1;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 0;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+}
+.highlight-text-lenovo h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.highlight-text-lenovo p {
+  margin-bottom: 15px;
+}
+.highlight-text-lenovo button {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 120px;
+  transition: background 0.3s;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+.highlight-text-lenovo button:hover {
+  background: #009cff;
+}
+
 /* Products Grid */
 .products {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1850px;
   margin: 40px auto;
   font-family: 'Poppins', sans-serif;
 }
@@ -110,10 +163,20 @@ body.loaded {
   border-radius: 10px;
   flex: 1 1 250px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+   box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.08);
   transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
   position: relative;
   z-index: 1;
+}
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.product-card p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  word-spacing: 5%;
 }
 .product-card:hover {
   transform: translateY(-10px) scale(1.04);
