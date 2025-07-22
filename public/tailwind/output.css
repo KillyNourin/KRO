@@ -528,9 +528,6 @@
   .static {
     position: static;
   }
-  .sticky {
-    position: sticky;
-  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -542,6 +539,9 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .z-50 {
+    z-index: 50;
   }
   .container {
     width: 100%;
@@ -560,6 +560,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .mx-0 {
+    margin-inline: calc(var(--spacing) * 0);
   }
   .-mt-\[4\.9rem\] {
     margin-top: calc(4.9rem * -1);
@@ -656,6 +659,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
   }
   .max-w-\[335px\] {
     max-width: 335px;
@@ -780,6 +786,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .pt-50 {
+    padding-top: calc(var(--spacing) * 50);
   }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
