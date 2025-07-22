@@ -5,6 +5,7 @@
 @push('styles')
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 @endpush
 
 
@@ -12,7 +13,8 @@
 <main>
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-left" data-aos="fade-left" data-aos-duration="1000">
+    <div class="hero-container">
+      <div class="hero-left" data-aos="fade-left" data-aos-duration="1000">
       <h1>Find Your Laptop,<br>Component Parts For Your PC Here, With Big Deals</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque quia perspiciatis, corporis quisquam natus 
           reiciendis expedita magnam sed dolorum officiis nihil molestias amet! Quos cupiditate dolorum aut incidunt cumque.</p>
@@ -30,6 +32,7 @@
           </div>
         @endforeach
       </div>
+    </div>
     </div>
   </section>
 
