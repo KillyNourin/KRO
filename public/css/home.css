@@ -152,7 +152,15 @@ body.loaded {
   padding: 10px 40px 40px; /* top 10px, kanan 40px, bawah 40px */
   box-sizing: border-box;
 }
-
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* batas lebar */
+  margin: 0 auto;     /* posisi tengah */
+  width: 100%;
+  gap: 40px;          /* jarak antara kiri & kanan */
+}
 .hero-left {
   flex: 1;
   max-width: 600px;
