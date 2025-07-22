@@ -16,4 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Smooth scroll for "More" buttons
+  document.querySelectorAll('.more-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      var targetSelector = btn.getAttribute('data-target');
+      var target = document.querySelector(targetSelector);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 });
