@@ -19,6 +19,40 @@
     @stack('styles')
     <!-- FONT family -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FONT family local -->
+    <style>
+    @font-face {
+        font-family: 'LemonMilk';
+        src: url('{{ asset('fonts/LEMONMILK-Bold.otf') }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'SourceSans3';
+        src: url('{{ asset('fonts/SourceSans3-Regular.ttf') }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'ROG';
+        src: url('{{ asset('fonts/ROGLyonsTypeRegular3.ttf') }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Rajdhani';
+        src: url('{{ asset('fonts/Rajdhani-Bold.ttf') }}') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'SourceSans3', 'ROG', 'Rajdhani', sans-serif, 'LemonMilk';
+    }
+    </style>
+
 </head>
 <body>
 
