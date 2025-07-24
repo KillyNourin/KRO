@@ -5,7 +5,11 @@
       <span>KorinTekno</span>
     </div>
 
-    <div class="nav-links">
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+      ☰
+    </button>
+
+    <div class="nav-links" id="nav-menu">
       <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
       <a href="/laptop" class="{{ request()->is('laptop') ? 'active' : '' }}">Laptop</a>
       <a href="/deals" class="{{ request()->is('deals') ? 'active' : '' }}">Deals</a>
@@ -28,19 +32,13 @@
 
     <div class="nav-actions">
       <button class="join-btn" onclick="toggleLoginPopup()">Join</button>
-        <form action="{{ url('/checkout') }}" method="GET">
+      <form action="{{ url('/checkout') }}" method="GET">
         <button type="submit" class="cart-btn">
-        <svg class="cart-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M6 6h15l-1.5 9h-13L4 4H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-13L4 4H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
-        </form>
+      </form>
     </div>
   </div>
 </nav>
-<script>
-  function toggleLoginPopup() {
-    const popup = document.getElementById('login-popup');
-    if (popup) popup.classList.toggle('show');
-  }
-</script>
