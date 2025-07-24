@@ -1,7 +1,6 @@
-// Tambahkan animasi fade out saat klik link
 document.addEventListener('DOMContentLoaded', () => {
+  // Fade out link
   document.body.classList.add('loaded');
-
   const links = document.querySelectorAll('a[href]');
   links.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -12,17 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 400);
     });
   });
-// login popup
-document.addEventListener('DOMContentLoaded', function () {
+
+  // Login popup
   const popupWrapper = document.querySelector('.auth-popup-wrapper');
   const authPopup = document.querySelector('.auth-popup');
   const joinButton = document.querySelector('.join-btn');
   const closeBtn = document.querySelector('.auth-close');
 
-  const loginForm = authPopup.querySelector('.login-form');
-  const registerForm = authPopup.querySelector('.register-form');
-  const switchToRegister = authPopup.querySelector('.switch-to-register');
-  const switchToLogin = authPopup.querySelector('.switch-to-login');
+  const loginForm = authPopup?.querySelector('.login-form');
+  const registerForm = authPopup?.querySelector('.register-form');
+  const switchToRegister = authPopup?.querySelector('.switch-to-register');
+  const switchToLogin = authPopup?.querySelector('.switch-to-login');
 
   if (joinButton && popupWrapper && loginForm && registerForm) {
     joinButton.addEventListener('click', () => {
@@ -31,17 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
       registerForm.classList.remove('active');
     });
 
-    closeBtn.addEventListener('click', () => {
+    closeBtn?.addEventListener('click', () => {
       popupWrapper.classList.add('hidden');
     });
 
-    switchToRegister.addEventListener('click', (e) => {
+    switchToRegister?.addEventListener('click', (e) => {
       e.preventDefault();
       loginForm.classList.remove('active');
       registerForm.classList.add('active');
     });
 
-    switchToLogin.addEventListener('click', (e) => {
+    switchToLogin?.addEventListener('click', (e) => {
       e.preventDefault();
       registerForm.classList.remove('active');
       loginForm.classList.add('active');
@@ -69,5 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  });
+
+  // ✅ Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger-btn');
+  const navMenu = document.getElementById('nav-menu');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  }
 });

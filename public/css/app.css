@@ -221,6 +221,63 @@ body.loaded {
   stroke: #009cff;
   transform: scale(1.1);
 }
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: #222;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-actions {
+    display: none; /* sembunyikan aksi nav seperti Join/Cart agar lebih rapi, bisa diatur kalau mau tampil */
+  }
+}
+
 /* Footer */
 footer {
   background: #111;
