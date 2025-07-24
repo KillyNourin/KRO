@@ -1,11 +1,13 @@
-/* Fade-in & Fade-out Animation for Page Transition */
+/* Global Reset & Font */
 body {
   opacity: 0;
   margin: 0;
-  font-family: 'Monseratt', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: #f5f5f5;
   color: #111;
   transition: opacity 0.4s ease;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 body.loaded {
   opacity: 1;
@@ -13,13 +15,17 @@ body.loaded {
 .fade-out {
   opacity: 0 !important;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* Section Brand */
 .brand-section {
   text-align: center;
   padding: 20px 0 6px;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom : 10px;
+  margin-bottom: 10px;
 }
 .brand-section h2 {
   font-size: 30px;
@@ -55,7 +61,6 @@ body.loaded {
   gap: 20px;
   background: #e6e6e6;
   border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
   background-size: cover;
   background-position: center;
 }
@@ -68,7 +73,8 @@ body.loaded {
 .highlight-banner-hp {
   background-image: url(/image/laptop/background-hp.png);
 }
-.highlight-text {
+.highlight-text,
+.highlight-text-lenovo {
   flex: 1;
   padding: 0 80px;
   display: flex;
@@ -77,14 +83,21 @@ body.loaded {
   margin: 60px 0;
   color: #fff;
 }
-.highlight-text h3 {
+.highlight-text-lenovo {
+  text-align: center;
+  align-items: center;
+}
+.highlight-text h3,
+.highlight-text-lenovo h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
-.highlight-text p {
+.highlight-text p,
+.highlight-text-lenovo p {
   margin-bottom: 15px;
 }
-.highlight-text button {
+.highlight-text button,
+.highlight-text-lenovo button {
   background: #ffffff;
   color: #000000;
   padding: 8px 18px;
@@ -96,7 +109,8 @@ body.loaded {
   transition: background 0.3s;
   font-weight: bold;
 }
-.highlight-text button:hover {
+.highlight-text button:hover,
+.highlight-text-lenovo button:hover {
   background: #009cff;
 }
 .highlight-img {
@@ -111,43 +125,6 @@ body.loaded {
   border-radius: 8px;
 }
 
-/* Highlight Text Lenovo */
-.highlight-text-lenovo {
-  flex: 1;
-  padding: 0 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 60px 0;
-  color: #fff;
-  text-align: center;
-  align-items: center;
-}
-.highlight-text-lenovo h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-.highlight-text-lenovo p {
-  margin-bottom: 15px;
-}
-.highlight-text-lenovo button {
-  background: #ffffff;
-  color: #000000;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  width: 120px;
-  transition: background 0.3s;
-  font-weight: bold;
-  text-align: center;
-  align-items: center;
-}
-.highlight-text-lenovo button:hover {
-  background: #009cff;
-}
-
 /* Products Grid */
 .products {
   display: flex;
@@ -156,6 +133,7 @@ body.loaded {
   max-width: 1850px;
   margin: 40px auto;
   font-family: 'Poppins', sans-serif;
+  justify-content: center;
 }
 .product-card {
   background: #fff;
@@ -163,7 +141,7 @@ body.loaded {
   border-radius: 10px;
   flex: 1 1 250px;
   text-align: center;
-   box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.08);
   transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
   position: relative;
   z-index: 1;
@@ -184,7 +162,6 @@ body.loaded {
   z-index: 2;
 }
 .product-card img {
-  width: 100%;
   margin-top: 10px;
   border-radius: 6px;
   transition: transform 0.3s;
@@ -205,6 +182,8 @@ body.loaded {
 .product-card button:hover {
   background: #009cff;
 }
+
+/* All Products Card */
 .all-products {
   display: flex;
   flex-direction: column;
@@ -231,13 +210,73 @@ body.loaded {
   background: #009cff;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .highlight-text {
-    padding: 0 20px;
+/* RESPONSIVE - Tablet */
+@media (max-width: 768px) {
+  .highlight-banner-asus,
+  .highlight-banner-lenovo,
+  .highlight-banner-hp {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
   }
+
+  .highlight-text,
+  .highlight-text-lenovo {
+    padding: 0 20px;
+    margin: 30px 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-img img {
+    max-width: 300px;
+  }
+
   .products {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
+  }
+
+  .product-card,
+  .all-products {
+    max-width: 90%;
+  }
+}
+
+/* RESPONSIVE - Mobile */
+@media (max-width: 480px) {
+  .brand-section h2 {
+    font-size: 24px;
+  }
+
+  .highlight-text h3,
+  .highlight-text-lenovo h3 {
+    font-size: 20px;
+  }
+
+  .highlight-text p,
+  .highlight-text-lenovo p {
+    font-size: 14px;
+  }
+
+  .highlight-text button,
+  .highlight-text-lenovo button {
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+
+  .product-card p {
+    font-size: 13px;
+  }
+
+  .all-products button {
+    font-size: 20px;
+    width: 40px;
   }
 }
