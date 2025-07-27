@@ -37,3 +37,9 @@ Route::post('/login', function (Request $request) {
         'login' => 'Username atau password salah.',
     ]);
 })->name('login.custom');
+
+
+// Route untuk menampilkan halaman detail produk
+Route::get('/product-detail', function () {
+    return view('product-detail');
+})->name('product.detail');

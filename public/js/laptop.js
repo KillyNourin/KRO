@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Function to redirect to product detail page
+document.addEventListener('DOMContentLoaded', function () {
+  const buyButtons = document.querySelectorAll('.buy-button');
+
+  buyButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const link = button.getAttribute('data-link');
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });
+});
