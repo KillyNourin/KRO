@@ -278,7 +278,128 @@ body.loaded {
     display: none; /* sembunyikan aksi nav seperti Join/Cart agar lebih rapi, bisa diatur kalau mau tampil */
   }
 }
+/* login pop up*/
+.auth-popup-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.auth-popup-wrapper.hidden {
+  display: none;
+}
+.auth-popup {
+  background: #fff;
+  padding: 30px 25px; /* Ubah padding agar isi tidak terlalu mepet */
+  border-radius: 12px;
+  max-width: 500px; /* ukuran max form */
+  width: 100%; /* Gunakan 100% agar full sesuai max-width */
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+.auth-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.auth-popup .form {
+  display: none;
+}
+.auth-popup .form.active {
+  display: block;
+}
+.auth-popup header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.auth-popup input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #111;
+}
+.auth-popup .field {
+  margin-bottom: 15px;
+}
+.auth-popup button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.auth-popup button:hover {
+  background-color: #0056b3;
+}
+.auth-popup .form-link {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.auth-popup .form-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+.auth-popup .form-link a:hover {
+  text-decoration: underline;
+}
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 2; /* pastikan di atas input */
+}
+.field {
+  width: 100%;
+  margin-bottom: 15px;
+}
 
+.input-field {
+  position: relative;
+  width: 100%;
+}
+
+.input-field input,
+.input-field .password {
+  width: 100%;
+  box-sizing: border-box; /* ⬅ penting supaya padding tidak melebihi box */
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.auth-popup input::placeholder {
+  color: #888 !important;
+  opacity: 1 !important;
+}
 /* Footer */
 footer {
   background: #111;
