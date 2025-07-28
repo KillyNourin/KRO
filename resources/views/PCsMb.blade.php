@@ -10,6 +10,7 @@
 
 @section('content')
 <main>
+@include('partials.login')
 {{-- Hero Section --}}
 <section class="hero">
     <div class="swiper mySwiper">
@@ -367,9 +368,13 @@
 
 </section>
 
-</main> 
+</main>
+
+
+@endsection
+
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/motherboard.js') }}"></script>
+    <script src="{{ asset('js/login.js') }}"></script>
 @endpush
-@endsection
