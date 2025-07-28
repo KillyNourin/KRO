@@ -12,38 +12,3 @@ html {
 .swiper-wrapper {
     transition-timing-function: ease-in-out;
 }
-
-/* --- Base State (Keadaan Awal untuk Semua Animasi) --- */
-[class*="reveal-"] {
-    opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-[class*="reveal-"].is-visible {
-    opacity: 1;
-    transform: none; /* Kembali ke posisi normal setelah animasi */
-}
-
-
-/* --- Tipe 1: Fade Up (Geser dari Bawah) --- */
-.reveal-fade-up {
-    transform: translateY(40px);
-}
-
-
-/* --- Tipe 2: Slide Left (Geser dari Kiri) --- */
-.reveal-slide-left {
-    transform: translateX(-50px);
-}
-
-
-/* --- Tipe 3: Slide Right (Geser dari Kanan) --- */
-.reveal-slide-right {
-    transform: translateX(50px);
-}
-
-
-/* --- Tipe 4: Zoom In (Membesar) --- */
-.reveal-zoom-in {
-    transform: scale(0.9);
-}
