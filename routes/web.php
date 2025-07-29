@@ -16,6 +16,9 @@ Route::get('checkout', function () {
 Route::get('PCsMb', function () {
     return view('PCsMb');
 });
+Route::get('PCsCPU', function () {
+    return view('PCsCPU');
+});
 use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
