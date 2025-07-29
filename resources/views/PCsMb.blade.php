@@ -1,3 +1,7 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 @extends('layouts.app')
 
 @section('title', 'KorinTekno - Motherboard')
@@ -13,24 +17,24 @@
 @include('partials.login')
 
 {{-- Hero Section --}}
-<section class="hero">
-    <div class="swiper mySwiper">
+<section class="hero w-full">
+    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/5] ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="{{ asset('image/slider/x870.jpg') }}" alt="Asus X870 Motherboard">
+                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/x870.jpg') }}" alt="Asus X870 Motherboard">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('image/slider/z890.jpg') }}" alt="Asus Z890 Motherboard">
+                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/z890.jpg') }}" alt="Asus Z890 Motherboard">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('image/slider/x870e.jpg') }}" alt="Asus X870E Motherboard">
+                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/x870e.jpg') }}" alt="Asus X870E Motherboard">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('image/slider/x870Eai.jpg') }}" alt="Asus X870E AI Motherboard">
+                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/x870Eai.jpg') }}" alt="Asus X870E AI Motherboard">
                 </div>
             </div>
 
-            <!-- button dan dot -->
+            <!-- button dan dot --> 
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
@@ -41,7 +45,7 @@
 {{-- Product Section --}}
 <section class="product-section">
     <div class="flex flex-col justify-center items-center">
-            <div class="flex justify-center items-center" data-aos="fade" data-aos-duration="2000">
+            <div class="flex flex-col md:flex-row justify-center items-center" data-aos="fade" data-aos-duration="2000">
                 <img class="max-w-xs h-auto m-20" src="{{ asset('image/Motherboard/MbROG.png') }}" alt="Motherboard ROG">
                 <img class="max-w-xs h-auto m-20" src="{{ asset('image/Motherboard/ProWsMb.png') }}" alt="Motherboard Pro WS">
             </div>
@@ -64,7 +68,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center px-4 sm:px-8 py-20 lg:p-12">
 
-        <!-- KOLOM KIRI: KONTEN TEKS (2/5 dari lebar) -->
+        <!-- kiri: teks (2/5 dari lebar) -->
         <!-- di mobile: urutan ke-2 (di bawah gambar), teks di tengah. Di desktop: urutan ke-1 (di kiri), teks rata kiri. -->
         <div class="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
 
@@ -104,8 +108,8 @@
             </div>
         </div>
 
-        <!-- KOLOM KANAN: GAMBAR PRODUK (3/5 dari lebar) -->
-        <!-- Di mobile: urutan ke-1 (di atas). Di desktop: urutan ke-2 (di kanan) -->
+        <!-- kanan: gambar produk (3/5 dari lebar) -->
+        <!-- di mobile: urutan ke-1 (di atas). Di desktop: urutan ke-2 (di kanan) -->
         <div class="lg:col-span-3 flex items-center justify-center order-1 lg:order-2" data-aos="fade-down" data-aos-duration="1500">
             <img 
                 src="{{ asset('image/Motherboard/X870E-Extreme.png') }}" 
@@ -123,11 +127,10 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center px-4 sm:px-8 py-20 lg:p-12">
 
-    <!-- KOLOM KIRI: KONTEN TEKS (2/5 dari lebar) -->
+    <!-- kiri: teks (2/5 dari lebar) -->
     <!-- di mobile: urutan ke-2 (di bawah gambar), teks di tengah. Di desktop: urutan ke-1 (di kiri), teks rata kiri. -->
     <div class="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">  
 
-            <!-- logo tuf -->
             <div class="mb-5">
                 <img src="{{ asset('image/Motherboard/tuf_logo.png') }}" alt="TUF Logo" class="h-25 w-auto" data-aos="fade" data-aos-duration="1500">
             </div>
@@ -165,7 +168,7 @@
             </div>
     </div>
 
-        <!-- KOLOM KANAN: GAMBAR PRODUK (3/5 dari lebar) -->
+        <!-- kanan: gambar produk (3/5 dari lebar) -->
         <!-- di mobile: urutan ke-1 (di atas). Di desktop: urutan ke-2 (di kanan) -->
         <div class="lg:col-span-3 flex items-center justify-center order-1 lg:order-2">
             <img 
@@ -181,12 +184,11 @@
 {{-- Pro Workstation Motherboard --}}
 <section class="bg-black py-24 px-5 text-center relative overflow-hidden">
 
-    <!-- elemen grafis latar belakang -->
     <div class="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[1200px] h-[400px] opacity-20 z-0" 
         style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ asset('image/Motherboard/gold-bg.jpg') }}'); background-size: cover; background-position: center;">
     </div>
 
-        <!-- wrapper untuk konten agar berada di atas grafis -->
+        <!-- wrapper untuk konten agar berada di atas bg -->
         <div class="relative z-10 max-w-7xl mx-auto">
 
             <!-- judul -->
@@ -222,7 +224,7 @@
                 </a>
             </div>
 
-            <!-- galeri untuk fitur-fitur -->
+            <!-- galeri -->
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 group">
 
                 <!-- item 1 -->
@@ -313,7 +315,7 @@
 {{-- ProArt Motherboard --}}
 <section class="relative w-full bg-black text-white">
 
-    <!-- 'aspect-[16/9]' menjaga rasio biar tetap konsisten -->
+    <!-- aspect-[16/9] menjaga rasio biar tetap konsisten -->
     <div class="w-full aspect-[16/9]" data-aos="fade-up" data-aos-duration="500">
         <img 
             src="{{ asset('image/Motherboard/pro-art.jpg') }}" 
@@ -322,7 +324,7 @@
         />
     </div>
 
-    <!-- (ditarik ke atas dengan margin negatif) -->
+    <!-- ditarik ke atas dengan margin negatif -->
     <div class="relative z-10 -mt-24 sm:-mt-32 lg:-mt-40 px-4 text-center">
         <div class="max-w-4xl mx-auto">
 
@@ -349,7 +351,7 @@
                 <img src="{{ asset('image/Motherboard/adobe-cc-3-month-free.png')}}" alt="Adobe Free 3 Month" class="h-11">
             </div>
 
-            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-duration="15000">
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-duration="1500">
                 <button class="bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                     Buy
                 </button>

@@ -48,8 +48,15 @@
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'Horyzen';
+        src: url('{ asset('fonts/HoryzenDigital-24.ttf')}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     body {
-        font-family: 'SourceSans3', 'ROG', 'Rajdhani', sans-serif, 'LemonMilk';
+        font-family: 'SourceSans3', 'ROG', 'Rajdhani', 'Horyzen', sans-serif, 'LemonMilk';
     }
     </style>
 
