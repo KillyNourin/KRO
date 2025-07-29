@@ -451,8 +451,8 @@ body.loaded {
 }
 
 .thumbnail-image {
-  width: 260px;         /* atur sesuai kebutuhan */
-  height: 260px;        /* tinggi tetap agar seragam */
+  width: 250px;         /* atur sesuai kebutuhan */
+  height: 250px;        /* tinggi tetap agar seragam */
   object-fit: contain;  /* biar gambar muat tanpa terpotong */
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);

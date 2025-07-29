@@ -29,7 +29,7 @@
       <p>NVIDIA® GeForce RTX™ 50 Series</p>
       <p>Intel® Core™ Ultra 9 Processor 275HX</p>
       <p>1TB M.2 NVMe™ Gen 4 Storage</p>
-      <button class="buy-button" data-link="{{ route('product.detail') }}">Buy</button>
+      <button class="buy-button" data-link="{{ route('product.detail', ['slug' => 'rog-strix-g16']) }}">Buy</button>
       <img src="{{ asset('image/laptop/rog-strix.png') }}" alt="ROG Strix">
     </div>
     <div class="product-card" data-aos="fade-up" data-aos-delay="100">
@@ -37,7 +37,7 @@
       <p>NVIDIA® GeForce RTX™ 50 Series</p>
       <p>AMD Ryzen™ 7 260 ProcessorX</p>
       <p>Up to 2TB M.2 NVMe™ Gen 4 Storage</p>
-      <button>Buy</button>
+      <button class="buy-button" data-link="{{ route('product.detail', ['slug' => 'asus-tuf-16']) }}">Buy</button>
       <img src="{{ asset('image/laptop/tuf-a16.png') }}" alt="TUF A16">
     </div>
     <div class="product-card" data-aos="fade-up" data-aos-delay="200">
