@@ -39,7 +39,6 @@ Route::post('/login', function (Request $request) {
 })->name('login.custom');
 
 
-// Route untuk menampilkan halaman detail produk
-Route::get('/product-detail', function () {
-    return view('product-detail');
-})->name('product.detail');
+use App\Http\Controllers\ProdukController;
+
+Route::get('/produk/{slug}', [ProdukController::class, 'show'])->name('product.detail');
