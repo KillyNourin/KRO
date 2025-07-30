@@ -23,9 +23,8 @@
         </button>
         <div class="dropdown-menu">
           <a href="/PCsMb" class="{{request()->is('PCsMb') ? 'active' : ''}}">Motherboard</a>
-          <a href="/PC/gpu">GPU</a>
+          <a href="/PCsGPU" class="{{request()->is('PCsGPU') ? 'active' : ''}}">GPU</a>
           <a href="/PCsCPU" class="{{request()->is('PCsCPU') ? 'active' : ''}}">CPU</a>
-          <a href="/PC/psu">Power Supply</a>
         </div>
       </div>
     </div>
