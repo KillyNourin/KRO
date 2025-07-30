@@ -98,10 +98,11 @@
             </div>
 
             <div class="mt-8 flex flex-col sm:flex-row items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
+                <a href="#">
                 <button class="w-full sm:w-auto bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                    Buy
+                    Buy</a>
                 </button>
-                <a class="text-white font-bold text-lg flex items-center group">
+                <a href="#" class="text-white font-bold text-lg flex items-center group">
                     Learn more
                     <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
                 </a>
@@ -158,10 +159,11 @@
             </div>
 
             <div class="mt-8 flex flex-col sm:flex-row items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
+                <a href="#">
                 <button class="w-full sm:w-auto bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                    Buy
+                    Buy</a>
                 </button>
-                <a class="text-white font-bold text-lg flex items-center group">
+                <a href="#" class="text-white font-bold text-lg flex items-center group">
                     Learn more
                     <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
                 </a>
@@ -215,10 +217,11 @@
             </p>
 
             <div class="flex justify-center items-center gap-6 mb-20" data-aos="fade-up" data-aos-duration="1500">
+                <a href="#">
                 <button class="bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                Buy
+                Buy</a>
                 </button>
-                <a class="text-white font-bold text-lg flex items-center group">
+                <a href="#" class="text-white font-bold text-lg flex items-center group">
                 Learn more
                 <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
                 </a>
@@ -352,10 +355,11 @@
             </div>
 
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-duration="1500">
+                <a href="#">
                 <button class="bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                    Buy
+                    Buy</a>
                 </button>
-                <a class="text-white font-bold text-lg flex items-center group">Learn more <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
+                <a href="#" class="text-white font-bold text-lg flex items-center group">Learn more <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
                 </a>
             </div>
         </div>
