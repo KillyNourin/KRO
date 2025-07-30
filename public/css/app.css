@@ -28,7 +28,15 @@ body.loaded {
   opacity: 1;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.content {
+  flex: 1;
+}
 /* Navbar */
 .navbar {
   background: #111;

@@ -62,18 +62,18 @@
 
 </head>
 <body>
-
+    <div class="wrapper">
     {{-- Navbar global --}}
     @include('partials.navbar')
 
     {{-- Konten halaman --}}
-    <main>
+    <main class="content">
         @yield('content')
     </main>
 
     {{-- Footer global --}}
     @include('partials.footer')
-
+    </div>
     <!-- JS Global -->
     <script src="{{ asset('js/app.js') }}"></script>
 
