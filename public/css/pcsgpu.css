@@ -1,0 +1,13 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --swiper-navigation-size: 0;
+    --swiper-pagination-bullet-size: 14px;
+}
+
+.swiper-wrapper {
+    transition-timing-function: ease-in-out;
+}
