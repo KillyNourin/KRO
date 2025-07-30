@@ -17,7 +17,7 @@
     <!-- Gambar -->
     <div class="sticky-image" style="flex: 1; min-width: 300px;">
       <div class="product-image">
-        <img class="main-img" src="{{ asset('image/laptop/rog-strix.png') }}" alt="{{ $produk->seri }}">
+        <img class="main-img" src="{{ asset($produk->gambar) }}" alt="{{ $produk->nama }}">
       </div>
       <div class="gallery">
         <!-- thumbnail manual jika perlu -->
