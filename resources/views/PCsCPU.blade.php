@@ -45,7 +45,7 @@
     <div class="space-y-24">
 
 <!-- Ryzen 9 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="lg:col-span-3" data-aos="fade-right" data-aos-duration="1500">
             <img src="{{asset('image/CPU/AMD-Ryzen-9-9900X.jpg')}}" alt="Ryzen 9" class="w-full aspect-[580/285] object-cover rounded-2xl">
@@ -67,7 +67,7 @@
 </section>
 
 <!-- Ryzen 7 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="order-2 lg:order-1 lg:col-span-2">
             <p class="text-sm font-semibold text-[#ff4d00] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">AMD Ryzen™ 7 9800X3D Desktop Processor</p>
@@ -75,7 +75,7 @@
             <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
             <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
             <a href="#" class="text-white font-bold flex items-center group">
-                earn more
+            Learn more
             <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
             </a>
             </div>
@@ -87,7 +87,7 @@
 </section>
 
 <!-- Ryzen 5 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="lg:col-span-3" data-aos="fade-right" data-aos-duration="1000">
         <img src="{{asset('image/CPU/amd-ryzen-5-9600x.jpg')}}" alt="Ryzen 5" class="w-full aspect-[580/285] object-cover rounded-2xl">
@@ -107,7 +107,7 @@
 </section>
 
 <!-- Intel Ultra 9 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="order-2 lg:order-1">
             <p class="text-sm font-semibold text-[#009CFF] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">Intel® Core™ Ultra 9 Processor 285K</p>
@@ -127,7 +127,7 @@
 </section>
 
 <!-- Intel Ultra 7 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="w-full" data-aos="fade-right" data-aos-duration="1000">
         <img src="{{asset('image/CPU/intel-core-ultra-7-265k.jpg')}}" alt="Intel Ultra 7" class="w-full aspect-[580/285] object-cover rounded-2xl">
@@ -147,7 +147,7 @@
 </section>
 
 <!-- Intel Ultra 5 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade" data-aos-duration="500">
+<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
         <div class="order-2 lg:order-1">
             <p class="text-sm font-semibold text-[#009CFF] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">Intel® Core™ Ultra 5 Processor 245T</p>
