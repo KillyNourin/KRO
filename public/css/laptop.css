@@ -6,6 +6,7 @@ body {
   background: #f5f5f5;
   color: #111;
   transition: opacity 0.4s ease;
+  max-width: 100%;
   margin: 0 auto;
 }
 body.loaded {
@@ -48,39 +49,43 @@ img {
   background: #009cff;
 }
 
-/* Highlight Banner */
-.highlight-banner-asus,
-.highlight-banner-lenovo,
-.highlight-banner-hp {
+/* Highlight Banner with Image */
+.highlight-img {
+  position: relative;
+}
+.highlight-banner {
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 20px;
   margin: 40px 0;
   align-items: center;
   gap: 20px;
-  background: #e6e6e6;
   border-radius: 10px;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
-.highlight-banner-asus {
-  background-image: url(/image/laptop/background-asus.png);
+.highlight-banner .highlight-img {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.highlight-banner-lenovo {
-  background-image: url(/image/laptop/lenovo-background.png);
-}
-.highlight-banner-hp {
-  background-image: url(/image/laptop/background-hp.png);
+.highlight-banner .highlight-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .highlight-text,
 .highlight-text-lenovo {
-  flex: 1;
-  padding: 0 80px;
+  flex: 1 1 50%;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 60px 0;
   color: #fff;
+  z-index: 2;
+  border-radius: 10px;
+  height: 100%;
 }
 .highlight-text-lenovo {
   text-align: center;
@@ -112,16 +117,19 @@ img {
 .highlight-text-lenovo button:hover {
   background: #009cff;
 }
-.highlight-img {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.overlay-left {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  text-align: left;
+  transform: translateY(-50%);
 }
-.highlight-img img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
+.overlay-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Products Grid */
@@ -209,71 +217,78 @@ img {
   background: #009cff;
 }
 
-/* RESPONSIVE - Tablet */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .highlight-banner-asus,
-  .highlight-banner-lenovo,
-  .highlight-banner-hp {
+  .highlight-banner {
     flex-direction: column;
-    padding: 60px 20px;
-    text-align: center;
   }
-
   .highlight-text,
   .highlight-text-lenovo {
-    padding: 0 20px;
-    margin: 30px 0;
-    align-items: center;
-    text-align: center;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    color: #fff;
   }
-
+  .overlay-left,
+  .overlay-center {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+  }
+  .highlight-img {
+    order: 0;
+  }
   .highlight-img img {
-    max-width: 300px;
+    border-radius: 0;
   }
-
-  .products {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .product-card,
-  .all-products {
-    max-width: 90%;
+  .highlight-text-lenovo {
+    text-align: center;
   }
 }
 
-/* RESPONSIVE - Mobile */
 @media (max-width: 480px) {
-  .brand-section h2 {
-    font-size: 24px;
+  .overlay-left,
+  .overlay-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
-
+  .brand-section h2 {
+    font-size: 22px;
+  }
   .highlight-text h3,
   .highlight-text-lenovo h3 {
-    font-size: 20px;
+    font-size: 12px;
   }
-
+  .highlight-text h3 {
+    font-size: 12px;
+    transform: translate(-40%, 20%);
+  }
   .highlight-text p,
   .highlight-text-lenovo p {
-    font-size: 14px;
+    font-size: 8px;
   }
-
+  .highlight-text p {
+    font-size: 8px;
+    transform: translate(-34.9%, 0%);
+  }
   .highlight-text button,
   .highlight-text-lenovo button {
-    font-size: 13px;
-    width: 100%;
-    padding: 10px;
+    font-size: 7px;
+    width: 70px;
+    padding: 4px;
   }
-
   .product-card h3 {
     font-size: 18px;
   }
-
   .product-card p {
     font-size: 13px;
   }
-
   .all-products button {
     font-size: 20px;
     width: 40px;
