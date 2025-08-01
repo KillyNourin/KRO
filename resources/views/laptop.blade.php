@@ -15,16 +15,18 @@
     <button class="more-btn" data-target="#asus-highlight">More</button>
   </section>
 
-  <div class="highlight-banner-asus" id="asus-highlight" data-aos="fade-right" data-aos-delay="300">
-    <div class="highlight-text">
+  <div class="highlight-banner" id="asus-highlight" data-aos="fade-right" data-aos-delay="300">
+    <img src="{{ asset('image/laptop/background-asus.png') }}" alt="Banner ASUS">
+    <div class="highlight-text overlay-left">
       <h3>ROG Strix G16</h3>
       <p>NVIDIA® GeForce RTX™ 50 Series</p>
       <button class="buy-btn" data-id="1">Buy</button>
     </div>
   </div>
 
+  <!-- Products ASUS -->
   <div class="products" id="asus-products">
-    <div class="product-card" data-aos="fade-up">
+        <div class="product-card" data-aos="fade-up">
       <h3>ROG Strix G16</h3>
       <p>NVIDIA® GeForce RTX™ 50 Series</p>
       <p>Intel® Core™ Ultra 9 Processor 275HX</p>
@@ -51,8 +53,9 @@
     <div class="product-card all-products" data-aos="fade-up" data-aos-delay="300">
       <h3>All Products</h3>
       <button>&#10140;</button>
-    </div>
+    </div>  
   </div>
+
 
   <!-- Lenovo Series -->
   <section class="brand-section">
@@ -61,14 +64,16 @@
     <button class="more-btn" data-target="#lenovo-highlight">More</button>
   </section>
 
-  <div class="highlight-banner-lenovo" id="lenovo-highlight" data-aos="fade-right" data-aos-delay="300">
-    <div class="highlight-text-lenovo">
+  <div class="highlight-banner" id="lenovo-highlight" data-aos="fade-right" data-aos-delay="300">
+    <img src="{{ asset('image/laptop/lenovo-background.png') }}" alt="Banner Lenovo">
+    <div class="highlight-text-lenovo overlay-center">
       <h3>Legion 5 Gen 10</h3>
       <p>RTX™ 50 Series Gaming Laptop</p>
       <button>Buy</button>
     </div>
   </div>
 
+  <!-- Products Lenovo -->
   <div class="products" id="lenovo-products">
     <div class="product-card" data-aos="fade-up">
       <h3>Legion 5 Gen 10</h3>
@@ -107,14 +112,18 @@
     <button class="more-btn" data-target="#hp-highlight">More</button>
   </section>
 
-  <div class="highlight-banner-hp" id="hp-highlight" data-aos="fade-right" data-aos-delay="500">
-    <div class="highlight-text">
-      <h3>Victus 15t</h3>
-      <p>RTX™ 40 Series Gaming Laptop</p>
-      <button>Buy</button>
+  <div class="highlight-banner" id="hp-highlight" data-aos="fade-right" data-aos-delay="500">
+    <div class="highlight-img">
+      <img src="{{ asset('image/laptop/background-hp.png') }}" alt="Banner HP">
+      <div class="highlight-text overlay-left">
+        <h3>HP Victus 15t </h3>
+        <p>RTX™ 40 Series Gaming Laptop</p>
+        <button>Buy</button>
+      </div>
     </div>
   </div>
 
+  <!-- Products HP -->
   <div class="products" id="hp-products">
     <div class="product-card" data-aos="fade-up">
       <h3>Victus 15t</h3>
