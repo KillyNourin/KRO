@@ -59,7 +59,7 @@
             <!-- judul -->
             <!-- ukuran font dan whitespace dibuat responsif -->
             <h1 class="text-white font-[poppins] font-thin text-shadow" data-aos="fade-right" data-aos-duration="1000">
-                <span class="text-5xl sm:text-6xl font-bold">GeForce RTX 50 Series</span><br>
+                <span class="text-5xl sm:text-6xl font-bold">GeForce RTX 5000 Series</span><br>
             </h1>
             <h2 class="mt-4 text-white text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-semibold font-[poppins]">Game Changer</h2>
 
@@ -236,7 +236,7 @@
             <h1 class="text-xl lg:text-2xl font-[poppins] font-bold">
                 Create with Your Favorite Tools
             </h1>
-            <p class="mt-4 text-lg max-w-sm leading-tight">Bring your creativity to life with AMD Radeon™ RX 9000 Series graphics in the most popular content creation applications.
+            <p class="mt-4 text-lg max-w-sm leading-tight">Bring your creativity to life with AMD Radeon™ RX 7000 Series graphics in the most popular content creation applications.
             </p>
         </div>
     </div>

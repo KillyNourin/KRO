@@ -22,6 +22,9 @@ Route::get('PCsCPU', function () {
 Route::get('PCsGPU', function () {
     return view('PCsGPU');
 });
+Route::get('Deals', function () {
+    return view('Deals');
+});
 use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
