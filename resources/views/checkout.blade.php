@@ -16,119 +16,114 @@
 
 @section('content')
 
-    @include('partials.login')
+@include('partials.login')
+<div class='container'>
+  <div class='window'>
+    {{-- Order Summary --}}
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <h2>Order Summary</h2>
+        <div class='line'></div>
 
-    <div class='container'>
-      <div class='window'>
-        <div class='order-info'>
-          <div class='order-info-content'>
-            <h2>Order Summary</h2>
-            <div class='line'></div>
-
-            {{-- Item 1 --}}
-            <table class='order-table'>
-              <tbody>
-                <tr>
-                  <td><img src='{{ asset('image/gaming/gaming1.png') }}' class="full-width"></td>
-                  <td>
-                    <br> <span class='thin'>Asus</span>
-                    <br> TUF Gaming A15<br> <span class='thin small'>Color: Black, Size: 2.3kg<br><br></span>
-                  </td>
-                </tr>
-                <tr><td><div class='price'>Rp.24.000.000</div></td></tr>
-              </tbody>
-            </table>
-
-            {{-- Item 2 --}}
-            <div class='line'></div>
-            <table class='order-table'>
-              <tbody>
-                <tr>
-                  <td><img src='{{ asset('image/carousel.png') }}' class="full-width"></td>
-                  <td>
-                    <br> <span class='thin'>PC</span>
-                    <br>Pre-Build<br> <span class='thin small'>Color: Black, Size: 15kg</span>
-                  </td>
-                </tr>
-                <tr><td><div class='price'>Rp.18.000.000</div></td></tr>
-              </tbody>
-            </table>
-
-            {{-- Item 3 --}}
-            <div class='line'></div>
-            <table class='order-table'>
-              <tbody>
-                <tr>
-                  <td><img src='{{ asset('image/carousel2.png') }}' class="full-width"></td>
-                  <td>
-                    <br> <span class='thin'>DELL</span>
-                    <br>XPS 13<br> <span class='thin small'>Color: Gray, Size: 1.29kg</span>
-                  </td>
-                </tr>
-                <tr><td><div class='price'>Rp.13.000.000</div></td></tr>
-              </tbody>
-            </table>
-
-            {{-- Total --}}
-            <div class='line'></div>
-            <div class='total'>
-              <span style='float:left;'>
-                <div class='thin dense'>VAT 19%</div>
-                <div class='thin dense'>Delivery</div>
-                TOTAL
-              </span>
-              <span style='float:right; text-align:right;'>
-                <div class='thin dense'>Rp.5.000</div>
-                <div class='thin dense'>Rp.10.000</div>
-                Rp.55.015.000
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {{-- Credit Card Form --}}
-        <div class='credit-info'>
-          <div class='credit-info-content'>
-            <table class='half-input-table'>
+        @if (empty($keranjang))
+          <p>Keranjang kosong.</p>
+        @else
+        @foreach ($keranjang as $key => $item)
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
               <tr>
-                <td style="color: white;">Please select your card:</td>
+                <td><img src="{{ $item['img'] }}" class="full-width" style="max-width: 80px;"></td>
                 <td>
-                  <div class='dropdownn' id='card-dropdownn'>
-                    <div class='dropdownn-btn' id='current-card'>Visa</div>
-                    <div class='dropdownn-select'>
-                      <ul>
-                        <li>Master Card</li>
-                        <li>American Express</li>
-                      </ul>
-                    </div>
+                  <br> <span class='thin'>{{ $item['name'] }}</span>
+                  <br>Qty: {{ $item['qty'] }}
+                  <br>
+                  <form method="POST" action="{{ route('keranjang.hapus', $key) }}" style="margin-top: 10px;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn-hapus" style="color:red; border:none; background:none; cursor:pointer;">🗑️</button>
+                  </form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="price">Rp.{{ number_format($item['price'] * $item['qty'], 0, ',', '.') }}</div>
                   </div>
                 </td>
               </tr>
-            </table>
+            </tbody>
+          </table>
+        @endforeach
 
-            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'>
+          @php
+            $total = collect($keranjang)->reduce(function ($carry, $item) {
+              return $carry + ($item['price'] * $item['qty']);
+            }, 0);
+          @endphp
 
-            Card Number
-            <input class='input-field'>
-            Card Holder
-            <input class='input-field'>
-
-            <table class='half-input-table'>
-              <tr>
-                <td>Expires
-                  <input class='input-field'>
-                </td>
-                <td>CVC
-                  <input class='input-field'>
-                </td>
-              </tr>
-            </table>
-
-            <button class='pay-btn'>Checkout</button>
+          <div class='line'></div>
+          <div class='total' style="clear: both;">
+            <span style='float:left;'>
+              <div class='thin dense'>Delivery</div>
+              TOTAL
+            </span>
+            <span style='float:right; text-align:right;'>
+              <div class='thin dense'>Rp 10.000</div>
+              Rp {{ number_format($total + 10000, 0, ',', '.') }}
+            </span>
           </div>
-        </div>
+        @endif
       </div>
     </div>
+
+    {{-- Credit Info --}}
+    <div class='credit-info'>
+      <div class='credit-info-content'>
+        <form method="POST" action="{{ route('order.submit') }}">
+          @csrf
+
+          <table class='half-input-table'>
+            <tr>
+              <td style="color: white;">Please select your card:</td>
+              <td>
+                <div class='dropdownn' id='card-dropdownn'>
+                  <div class='dropdownn-btn' id='current-card'>Visa</div>
+                  <div class='dropdownn-select'>
+                    <ul>
+                      <li>Master Card</li>
+                      <li>American Express</li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'>
+
+          Card Number
+          <input class='input-field' required>
+          Card Holder
+          <input class='input-field' required>
+
+          <table class='half-input-table'>
+            <tr>
+              <td>Expires
+                <input class='input-field' required>
+              </td>
+              <td>CVC
+                <input class='input-field' required>
+              </td>
+            </tr>
+          </table>
+
+          <button class="pay-btn" type="submit">Checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
 
