@@ -36,7 +36,6 @@ Route::get('PCsGPU', function () {
 Route::get('Deals', function () {
     return view('Deals');
 });
-use App\Http\Controllers\HomeController;
 
 // HOME & STATIC
 Route::get('/', [HomeController::class, 'index'])->name('home');
