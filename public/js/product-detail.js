@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Tab Navigasi: Deskripsi & Spesifikasi
+  // Navigasi Tab Deskripsi / Spesifikasi
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-pane");
 
@@ -7,18 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", function () {
       const target = this.dataset.tab;
 
-      // Reset semua tab & konten
       tabBtns.forEach(b => b.classList.remove("active"));
       tabContents.forEach(pane => pane.classList.remove("active"));
 
-      // Aktifkan yang dipilih
       this.classList.add("active");
       const activePane = document.getElementById(target);
       if (activePane) activePane.classList.add("active");
     });
   });
 
-  // Tombol Pilihan Warna
+  // Pilihan Warna
   const colorBtns = document.querySelectorAll(".color-btn");
   colorBtns.forEach(btn => {
     btn.addEventListener("click", function () {
@@ -27,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Subtotal Kalkulasi
+  // Kalkulasi Subtotal
   const priceElement = document.querySelector(".price");
   const qtyInput = document.querySelector(".qty-input");
   const subtotal = document.querySelector(".subtotal");
@@ -37,12 +35,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const updateSubtotal = () => {
       const qty = parseInt(qtyInput.value) || 1;
-      subtotal.innerText = `Subtotal: Rp ${new Intl.NumberFormat("id-ID").format(price * qty)}`;
+      const sub = price * qty;
+      subtotal.innerText = `Subtotal: Rp ${new Intl.NumberFormat("id-ID").format(sub)}`;
     };
 
     qtyInput.addEventListener("input", updateSubtotal);
+    updateSubtotal(); // inisialisasi
+  }
 
-    // Inisialisasi saat load
-    updateSubtotal();
+  // Tambah ke Keranjang
+  const cartBtn = document.querySelector('.cart-product-btn');
+
+  if (cartBtn) {
+    cartBtn.addEventListener('click', function () {
+      const qty = parseInt(document.querySelector('.qty-input')?.value || 1);
+
+      const data = {
+        id: this.dataset.id,
+        name: this.dataset.name,
+        price: this.dataset.price,
+        qty: qty,
+        img: this.dataset.img
+      };
+
+      // Debug
+      console.log("Kirim ke keranjang:", data);
+
+      // Validasi minimal
+      if (!data.id || !data.name || !data.price) {
+        alert("Data produk tidak lengkap.");
+        return;
+      }
+
+      fetch('/keranjang/tambah', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content
+        },
+        body: JSON.stringify(data)
+      })
+        .then(res => res.json())
+        .then(resData => {
+          if (resData.success) {
+            window.location.href = '/checkout';
+          } else {
+            alert("Gagal menambahkan ke keranjang.");
+          }
+        })
+        .catch(err => {
+          console.error("Gagal fetch / parsing JSON:", err);
+          alert("Terjadi kesalahan saat mengirim data ke server.");
+        });
+    });
   }
 });
