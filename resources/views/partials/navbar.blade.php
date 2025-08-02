@@ -12,7 +12,7 @@
     <div class="nav-links" id="nav-menu">
       <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
       <a href="/laptop" class="{{ request()->is('laptop') ? 'active' : '' }}">Laptop</a>
-      <a href="/deals" class="{{ request()->is('deals') ? 'active' : '' }}">Deals</a>
+      <a href="/Deals" class="{{ request()->is('Deals') ? 'active' : '' }}">Deals</a>
 
       <div class="dropdown">
         <button class="dropdown-btn">

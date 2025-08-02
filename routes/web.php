@@ -14,6 +14,30 @@ use App\Http\Controllers\OrderController;
 |--------------------------------------------------------------------------
 */
 
+
+Route::get('home', function () {
+    return view('home');
+});
+Route::get('/laptop', function () {
+    return view('laptop');
+});
+Route::get('checkout', function () {
+    return view('checkout');
+});
+Route::get('PCsMb', function () {
+    return view('PCsMb');
+});
+Route::get('PCsCPU', function () {
+    return view('PCsCPU');
+});
+Route::get('PCsGPU', function () {
+    return view('PCsGPU');
+});
+Route::get('Deals', function () {
+    return view('Deals');
+});
+use App\Http\Controllers\HomeController;
+
 // HOME & STATIC
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/home', 'home');

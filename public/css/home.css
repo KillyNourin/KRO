@@ -5,7 +5,7 @@
     --background-color: #f8f9fa;
     --dark-color: #111;
     --light-color: #ffffff;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Poppins', 'SourceSans3', sans-serif;
     --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 /* *,
@@ -18,7 +18,7 @@
 body {
   opacity: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'SourceSans3';
   background: var(--background-color);
   color: #111;
   transition: opacity 0.4s ease;
@@ -317,6 +317,7 @@ body.loaded {
   font-size: 2em;
   margin-bottom: 30px;
   font-weight: 600;
+  font-family: 'Poppins';
 }
 
 /* Tab Menu */
@@ -504,6 +505,8 @@ body.loaded {
   width: 80%;
   margin: auto;
   text-align: center;
+  font-size: 3em;
+  font-family: 'Poppins';
   /* padding-top: 10px; */
 }
 .category-col {
