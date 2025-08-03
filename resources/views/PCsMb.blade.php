@@ -18,7 +18,7 @@
 
 {{-- Hero Section --}}
 <section class="hero w-full">
-    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/5] ">
+    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/9] sm:aspect-[16/6] lg:aspect-[16/5] ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img class="w-full h-full object-cover" src="{{ asset('image/slider/x870.jpg') }}" alt="Asus X870 Motherboard">
@@ -213,7 +213,7 @@
             professionals. Each motherboard includes centralized 
             management software with support for out-of-band management, 
             so they're also an efficient and cost effective option for IT 
-            administrators.
+            administrators.RTX OFFRTX ON
             </p>
 
             <div class="flex justify-center items-center gap-6 mb-20" data-aos="fade-up" data-aos-duration="1500">
@@ -356,10 +356,10 @@
 
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6" data-aos="fade-up" data-aos-duration="1500">
                 <a href="#">
-                <button class="bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                <button class=" mb-10 bg-white text-black font-bold text-lg py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                     Buy</a>
                 </button>
-                <a href="#" class="text-white font-bold text-lg flex items-center group">Learn more <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
+                <a href="#" class="mb-10 text-white font-bold text-lg flex items-center group">Learn more <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
                 </a>
             </div>
         </div>

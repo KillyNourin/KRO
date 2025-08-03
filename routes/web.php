@@ -9,9 +9,41 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\OrderController;
 
+
 // =====================================
 // 🔹 STATIC & PUBLIC ROUTES
 // =====================================
+=======
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('home', function () {
+    return view('home');
+});
+Route::get('/laptop', function () {
+    return view('laptop');
+});
+Route::get('checkout', function () {
+    return view('checkout');
+});
+Route::get('PCsMb', function () {
+    return view('PCsMb');
+});
+Route::get('PCsCPU', function () {
+    return view('PCsCPU');
+});
+Route::get('PCsGPU', function () {
+    return view('PCsGPU');
+});
+Route::get('Deals', function () {
+    return view('Deals');
+});
+
+// HOME & STATIC
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/home', 'home');
 Route::view('/PCsMb', 'PCsMb');

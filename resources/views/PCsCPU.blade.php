@@ -18,7 +18,7 @@
 
 {{-- Hero Section --}}
 <section class="hero w-full">
-    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/5] ">
+    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/9] sm:aspect-[16/6] lg:aspect-[16/5]">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img class="w-full h-full object-cover" src="{{ asset('image/slider/amd-radeon.jpg') }}" alt="AMD">
