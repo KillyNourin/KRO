@@ -71,7 +71,21 @@ Route::post('/login', function (Request $request) {
         'login' => 'Username atau password salah.',
     ]);
 })->name('login.custom');
+Route::post('/register', function (Request $request) {
+    $request->validate([
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|min:6|confirmed',
+    ]);
 
+    $user = User::create([
+        'name' => explode('@', $request->email)[0], // default nama dari email
+        'email' => $request->email,
+        'password' => bcrypt($request->password),
+    ]);
+
+    Auth::login($user); // login otomatis setelah register
+    return redirect('/')->with('success', 'Akun berhasil dibuat dan login!');
+})->name('register.custom');
 // =====================================
 // 🔹 DEBUG
 // =====================================
