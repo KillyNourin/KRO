@@ -1,4 +1,4 @@
-# KRO (KillyRinOris) - KROTekno Product Catalog
+# KRO (KillyRinOris) - KorinTekno Product Catalog
 
 <img width="3000" height="3000" alt="logo1" src="https://github.com/user-attachments/assets/203614db-1b6a-4645-8b35-7b58e158d794" />
 
