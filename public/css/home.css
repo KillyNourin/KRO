@@ -560,3 +560,93 @@ body.loaded {
   bottom: 49%;
   opacity: 1;
 }
+
+/* responsive */
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px 20px 40px;
+    text-align: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-left {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 2em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .first-card {
+    flex-direction: column;
+  }
+
+  .card-details {
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .thumbnail-image {
+    display: none;
+  }
+
+  .menu-nav {
+    gap: 15px;
+    font-size: 0.95em;
+  }
+
+  .category {
+    font-size: 1.8em;
+  }
+
+  .category-col {
+    flex-basis: 100%;
+  }
+
+  .auth-popup {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .auth-popup header {
+    font-size: 1.2rem;
+  }
+
+  .auth-popup button {
+    font-size: 0.95rem;
+  }
+
+  .auth-close {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .scroll-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 300px;
+  }
+}
