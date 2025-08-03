@@ -29,6 +29,7 @@ This project is built using a modern technology stack, including:
     -   [NPM](https://www.npmjs.com/)
 -   **Libraries**:
     -   [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/)
+    -   [Swiper JS](https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js)
 
 ---
 
