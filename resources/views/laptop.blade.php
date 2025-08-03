@@ -4,10 +4,12 @@
 
 @push('styles')
   <link rel="stylesheet" href="{{ asset('css/laptop.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endpush
 
 @section('content')
 <main>
+  @include('partials.login')
   <!-- ASUS Series -->
   <section class="brand-section">
     <h2>Asus Series</h2>
@@ -159,4 +161,5 @@
 
 @push('scripts')
   <script src="{{ asset('js/laptop.js') }}" defer></script>
+  <script src="{{ asset('js/login.js') }}" defer></script>
 @endpush
