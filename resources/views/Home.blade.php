@@ -28,7 +28,7 @@
         <!-- Carousel Images -->
         @foreach ($carouselImages as $file)
           <div class="grid-item">
-          <img src="{{ asset('image/' . $file->getFilename()) }}" alt="Produk">
+          <img src="{{ asset('image/laptop/' . $file->getFilename()) }}" alt="Produk">
           </div>
         @endforeach
       </div>

@@ -56,7 +56,15 @@
       <input type="number" class="qty-input" min="1" value="1">
       <div class="subtotal">Subtotal: Rp {{ number_format($produk->harga, 0, ',', '.') }}</div>
       <div class="buy-actions">
-      <button class="cart-product-btn">+ Keranjang</button>
+      <button
+        class="cart-product-btn"
+        data-id="{{ $produk->id_barang }}"
+        data-name="{{ $produk->seri }}"
+        data-price="{{ $produk->harga }}"
+        data-img="{{ asset($produk->gambar) }}"
+      >
+        + Keranjang
+      </button>
       <button class="buy-btn">Beli Sekarang</button>
       </div>
     </div>
