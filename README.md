@@ -51,7 +51,7 @@ Here are some of the key files and directories in this project:
 A huge thanks to all the people who have contributed:
 
 <a href="https://github.com/KillyNourin">
-  <img src="[https://github.com/user-attachments/assets/50e58a30-d29c-4281-a37b-d372c0c57b9f]" width="50px;" alt="KillyNourin"/>
+  <img src="(https://github.com/user-attachments/assets/50e58a30-d29c-4281-a37b-d372c0c57b9f\)" width="50px;" alt="KillyNourin"/>
 </a>
 
 <a href="https://github.com/Rinshiryu">
