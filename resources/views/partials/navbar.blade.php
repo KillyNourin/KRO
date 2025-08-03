@@ -28,14 +28,19 @@
         </div>
       </div>
     </div>
-
+    @php
+      $hasCart = Session::has('keranjang') && count(Session::get('keranjang')) > 0;
+    @endphp
     <div class="nav-actions">
       <button class="join-btn" onclick="toggleLoginPopup()">Join</button>
-      <form action="{{ url('/checkout') }}" method="GET">
+      <form action="{{ url('/checkout') }}" method="GET" style="position: relative;">
         <button type="submit" class="cart-btn">
           <svg class="cart-icon" viewBox="0 0 24 24" fill="none">
             <path d="M6 6h15l-1.5 9h-13L4 4H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
+          @if ($hasCart)
+            <span class="cart-badge"></span>
+          @endif
         </button>
       </form>
     </div>
