@@ -19,4 +19,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+    
+    public function getAuthIdentifierName()
+    {
+        return 'username';
+    }
 }
+
