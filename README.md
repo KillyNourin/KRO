@@ -7,7 +7,7 @@ Welcome to KRO, a web application project built to display a catalog of tech pro
 
 ## Wireframe
 
-The UI/UX design and wireframes for this project were created in Figma. 
+The Wireframes for this project were created in Figma. 
 
 **[View The Wireframe on Figma](https://www.figma.com/design/zfEqevnPeX84wo98q9oOo4/E-commerce?m=auto&t=BHm7yRz1a61FKpl0-1)**
 
