@@ -2,7 +2,8 @@
 
 Welcome to KRO, a web application project built to display a catalog of tech products, specializing in laptops. This application is designed with a clean, modern, and interactive interface using the Laravel framework.
 
-![Screenshot KRO](<img width="3000" height="2996" alt="logo" src="https://github.com/user-attachments/assets/5898e4c9-ce6c-47b3-be73-ec35f69ec917" />)
+
+<img width="3000" height="2996" alt="logo" src="https://github.com/user-attachments/assets/b95c08a4-aac4-42f6-9377-6cd9422432e0" />
 
 
 ## Wireframe & Design
