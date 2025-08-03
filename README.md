@@ -1,4 +1,4 @@
-# KRO - KorinTekno Product Catalog
+# KRO (KillyRinOris) - KROTekno Product Catalog
 
 <img width="3000" height="3000" alt="logo1" src="https://github.com/user-attachments/assets/203614db-1b6a-4645-8b35-7b58e158d794" />
 
@@ -51,7 +51,7 @@ Here are some of the key files and directories in this project:
 A huge thanks to all the people who have contributed:
 
 <a href="https://github.com/KillyNourin">
-  <img src="https://avatars.githubusercontent.com/u/184803750" width="50px;" alt="KillyNourin"/>
+  <img src="[https://avatars.githubusercontent.com/u/184803750](https://github.com/user-attachments/assets/50e58a30-d29c-4281-a37b-d372c0c57b9f)" width="50px;" alt="KillyNourin"/>
 </a>
 
 <a href="https://github.com/Rinshiryu">
@@ -63,6 +63,7 @@ A huge thanks to all the people who have contributed:
 </a>
 
 ---
+
 
 ## License
 
