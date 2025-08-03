@@ -1,16 +1,15 @@
 # KRO - KorinTekno Product Catalog
 
+<img width="3000" height="3000" alt="logo1" src="https://github.com/user-attachments/assets/203614db-1b6a-4645-8b35-7b58e158d794" />
+
+
 Welcome to KRO, a web application project built to display a catalog of tech products, specializing in laptops. This application is designed with a clean, modern, and interactive interface using the Laravel framework.
 
+## Wireframe
 
-<img width="3000" height="2996" alt="logo" src="https://github.com/user-attachments/assets/b95c08a4-aac4-42f6-9377-6cd9422432e0" />
+The UI/UX design and wireframes for this project were created in Figma. 
 
-
-## Wireframe & Design
-
-The UI/UX design and wireframes for this project were created in Figma.
-
-**[View Full Design on Figma](https://www.figma.com/design/zfEqevnPeX84wo98q9oOo4/E-commerce?m=auto&t=BHm7yRz1a61FKpl0-1)**
+**[View The Wireframe on Figma](https://www.figma.com/design/zfEqevnPeX84wo98q9oOo4/E-commerce?m=auto&t=BHm7yRz1a61FKpl0-1)**
 
 ## Tech Stack
 
