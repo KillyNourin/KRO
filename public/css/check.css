@@ -431,3 +431,99 @@ ul li:hover {
     border-radius:0px;
   }
 }
+@media (max-width: 480px) {
+  .auth-popup {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .auth-popup header {
+    font-size: 1.3rem;
+  }
+
+  .auth-popup input {
+    font-size: 0.95rem;
+  }
+
+  .auth-popup button {
+    font-size: 0.95rem;
+  }
+
+  .auth-close {
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .window {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border-radius: 0;
+    flex-direction: column;
+  }
+
+  .order-info, .credit-info {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .pay-btn {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  .total {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .dropdownn {
+    width: 100%;
+  }
+
+  .credit-card-image {
+    max-height: 60px;
+    margin-top: 20px;
+  }
+
+  .input-field {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  .dropdownn-select {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .dense {
+    font-size: 0.95rem;
+  }
+
+  .btn-hapus {
+    font-size: 12px;
+  }
+
+  .order-table td:first-of-type {
+    width: auto;
+  }
+
+  .order-table td:last-of-type {
+    padding-left: 15px;
+  }
+}

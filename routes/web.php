@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -8,6 +9,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\OrderController;
 
+
+// =====================================
+// 🔹 STATIC & PUBLIC ROUTES
+// =====================================
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,17 +49,21 @@ Route::view('/PCsMb', 'PCsMb');
 Route::view('/PCsCPU', 'PCsCPU');
 Route::view('/PCsGPU', 'PCsGPU');
 Route::view('/laptop', 'laptop');
+Route::view('/Deals', 'Deals');
 
-// LOGIN CUSTOM
-
+// =====================================
+// 🔹 CUSTOM LOGIN (Popup-based)
+// =====================================
 Route::get('/login', function () {
-    return redirect('/'); // atau bisa ke mana pun yang menampilkan popup login
+    return redirect('/'); // Menampilkan popup login
 })->name('login');
+
 Route::post('/login', function (Request $request) {
     $credentials = $request->only('username', 'password');
 
     if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
+         logger('LOGIN SUCCESS: ' . Auth::user()->id); // Tambahkan ini
         return redirect('/')->with('success', 'Login berhasil!');
     }
 
@@ -62,33 +71,65 @@ Route::post('/login', function (Request $request) {
         'login' => 'Username atau password salah.',
     ]);
 })->name('login.custom');
-// Di route mana saja sementara, contoh:
+Route::post('/register', function (Request $request) {
+    $request->validate([
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|min:6|confirmed',
+    ]);
+
+    $user = User::create([
+        'name' => explode('@', $request->email)[0], // default nama dari email
+        'email' => $request->email,
+        'password' => bcrypt($request->password),
+    ]);
+
+    Auth::login($user); // login otomatis setelah register
+    return redirect('/')->with('success', 'Akun berhasil dibuat dan login!');
+})->name('register.custom');
+// =====================================
+// 🔹 DEBUG
+// =====================================
 Route::get('/debug-user', function () {
     return dd(Auth::user());
 });
 
-// PRODUK
+// =====================================
+// 🔹 PRODUK ROUTE
+// =====================================
 Route::get('/produk/{slug}', [ProdukController::class, 'show'])->name('product.detail');
 
-// KERANJANG & ORDER (tanpa login)
+// =====================================
+// 🔹 KERANJANG ROUTE (Bebas Akses)
+// =====================================
 Route::post('/keranjang/tambah', [OrderController::class, 'tambah'])->name('keranjang.tambah');
 Route::delete('/keranjang/hapus/{id}', [OrderController::class, 'hapus'])->name('keranjang.hapus');
 
-// CHECKOUT & SUBMIT ORDER (HARUS LOGIN)
+// =====================================
+// 🔐 ROUTE YANG BUTUH LOGIN
+// =====================================
 Route::middleware('auth')->group(function () {
     Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
     Route::post('/checkout/submit', [OrderController::class, 'submitOrder'])->name('order.submit');
-});
-Route::get('/fix-passwords', function () {
-    \App\Models\User::all()->each(function ($user) {
-        if (!\Illuminate\Support\Facades\Hash::needsRehash($user->password)) return;
 
-        $user->password = bcrypt($user->password); // hash password lama
+    // Konfirmasi setelah bayar
+    Route::post('/checkout/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi');
+    Route::get('/order/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi.page');
+});
+
+// =====================================
+// 🔧 UTILITAS / DEBUG
+// =====================================
+Route::get('/fix-passwords', function () {
+    User::all()->each(function ($user) {
+        if (!Hash::needsRehash($user->password)) return;
+
+        $user->password = bcrypt($user->password);
         $user->save();
     });
 
-    return 'Semua password sudah dihash!';
+    return 'Semua password sudah di-hash!';
 });
+
 Route::post('/checkout/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi');
 Route::get('/order/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi.page');
 
@@ -101,3 +142,5 @@ Route::get('Deals', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth');
+
+
