@@ -129,3 +129,18 @@ Route::get('/fix-passwords', function () {
 
     return 'Semua password sudah di-hash!';
 });
+
+Route::post('/checkout/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi');
+Route::get('/order/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->name('order.konfirmasi.page');
+
+//route deals
+Route::get('Deals', function () {
+    return view('Deals');
+});
+
+//route untuk profil login
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth');
+
+

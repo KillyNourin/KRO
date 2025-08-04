@@ -208,6 +208,10 @@ body.loaded {
   color: #fff;
   border-color: #009cff;
 }
+.nav-actions img {
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 .cart-btn {
   background: transparent;
