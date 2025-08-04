@@ -29,15 +29,31 @@
       </div>
     </div>
 
-    <div class="nav-actions">
-      <button class="join-btn" onclick="toggleLoginPopup()">Join</button>
-      <form action="{{ url('/checkout') }}" method="GET">
-        <button type="submit" class="cart-btn">
-          <svg class="cart-icon" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6h15l-1.5 9h-13L4 4H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </form>
-    </div>
-  </div>
+<div class="nav-actions">
+    @auth
+        {{-- Jika sudah login, tampilkan foto profil --}}
+        <div class="dropdown">
+            <button class="dropdown-btn">
+                <img src="{{ Auth::user()->profile_photo ?? asset('images/default-user.png') }}" alt="Profile" style="width: 36px; height: 36px; border-radius: 50%;">
+                <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class="dropdown-menu">
+                <a href="/profile">Profil Saya</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    @else
+        {{-- Jika belum login, tampilkan tombol Join --}}
+        <button class="join-btn" onclick="openAuthPopup()">Join</button>
+    @endauth
+
+    {{-- Cart tetap tampil --}}
+    <button class="cart-btn">
+        <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9v9" />
+        </svg>
+    </button>
+</div>
 </nav>

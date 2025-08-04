@@ -96,3 +96,8 @@ Route::get('/order/konfirmasi/{id}', [OrderController::class, 'konfirmasi'])->na
 Route::get('Deals', function () {
     return view('Deals');
 });
+
+//route untuk profil login
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth');
