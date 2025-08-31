@@ -38,15 +38,23 @@
       {{-- Jika sudah login, tampilkan foto profil --}}
       <div class="dropdown">
           <button class="dropdown-btn">
-              <img src="{{ Auth::user()->profile_photo ?? asset('images/default-user.png') }}" 
+              <img src="{{ Auth::user()->profile_photo ?? asset('image/p3.ico') }}" 
                   alt="Profile" style="width: 36px; height: 36px; border-radius: 50%;">
               <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
           </button>
           <div class="dropdown-menu">
-                <a href="/profile">Profil Saya</a>
-                <a href="/logout">Logout</a>
+                <a href="#">Profil Saya</a>
+                <a href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">Logout</a>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+</div>
+
           </div>
       </div>
   @else
