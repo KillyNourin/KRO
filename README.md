@@ -55,7 +55,12 @@ Here's how you can connect the **KorinTekno** database into the Laravel project:
    DB_DATABASE=korin
    DB_USERNAME=root
    DB_PASSWORD=
-
+    
+    SESSION_DRIVER=file
+    SESSION_LIFETIME=120
+    SESSION_ENCRYPT=false
+    SESSION_PATH=/
+    SESSION_DOMAIN=null
 ---
 
 ## Project Structure
