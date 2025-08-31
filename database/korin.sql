@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2025 at 05:57 PM
+-- Generation Time: Aug 03, 2025 at 02:55 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -143,7 +143,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `phone`) VALUES
-(1, 'kor', '$2y$12$tltBWRkXQkXwEIsEso0fkeQpMqU.HsWcnUO999WvyHrMoZIaId15a', 21987);
+(1, 'kor', '$2y$12$b8IN/6VByXSAsT7KO74vaOZ0q1hpx4m14ZqjaAI9Js2WcIjW35lcC', 21987);
 
 --
 -- Indexes for dumped tables

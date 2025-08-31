@@ -33,6 +33,31 @@ This project is built using a modern technology stack, including:
 
 ---
 
+## Setup the Database
+
+Here's how you can connect the **KorinTekno** database into the Laravel project:
+
+1. **Download the database file**  
+   👉 [Download file database korin](./database/korin.sql)  
+
+2. **Import ke Database**  
+   - Buka **phpMyAdmin** atau tool MySQL lainnya.
+   - Buat database baru (misalnya: `korin`).
+   - Import file `database.xml` ke dalam database tersebut.
+
+3. **Konfigurasi `.env` Laravel**  
+   Edit file `.env` di root project Laravel kamu sesuai dengan pengaturan database lokal:
+
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=korin
+   DB_USERNAME=root
+   DB_PASSWORD=
+
+---
+
 ## Project Structure
 
 Here are some of the key files and directories in this project:
