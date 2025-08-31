@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Auth\LoginController;
 
 
 // =====================================
@@ -142,5 +143,7 @@ Route::get('Deals', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth');
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
