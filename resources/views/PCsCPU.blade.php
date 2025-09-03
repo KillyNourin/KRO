@@ -17,153 +17,79 @@
 @include('partials.login')
 
 {{-- Hero Section --}}
-<section class="hero w-full">
-    <div class="swiper mySwiper relative overflow-hidden w-full mx-auto aspect-[16/9] sm:aspect-[16/6] lg:aspect-[16/5]">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/amd-radeon.jpg') }}" alt="AMD">
+<section class="w-full font-[poppins]">
+
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/AMD-Ryzen-9-9900X.jpg')}}" alt="AMD" class="absolute inset-0 w-full h-full object-cover object-center"/>
+        <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full  text-center text-white px-4">
+            <h2 class="text-4xl font-bold mb-2"> <span class="text-[#ff4d00]">AMD Ryzen™</span> 9 9950X Series processors</h2>
+                <div class="mb-4 text-lg">
+                    <p>The Fastest Gaming Processor the World has Ever Seen</p>
                 </div>
-                <div class="swiper-slide">
-                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/ryzen.jpg') }}" alt="Ryzen">
-                </div>
-                <div class="swiper-slide">
-                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/intel-processor.jpg') }}" alt="Intel Processor">
-                </div>
-                <div class="swiper-slide">
-                    <img class="w-full h-full object-cover" src="{{ asset('image/slider/intelAjh.jpg') }}" alt="Intel AJH">
-                </div>
-            </div>
-
-            <!-- button dan dot --> 
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
+</div>
 
-{{-- Product Section --}}
-<section class="product max-w-7xl mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-    <div class="space-y-24">
-
-<!-- Ryzen 9 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="lg:col-span-3" data-aos="fade-right" data-aos-duration="1500">
-            <img src="{{asset('image/CPU/AMD-Ryzen-9-9900X.jpg')}}" alt="Ryzen 9" class="w-full aspect-[580/285] object-cover rounded-2xl">
-        </div>
-        <div class="lg:col-span-2">
-            <p class="text-sm font-semibold text-[#ff4d00] tracking-wider uppercase" data-aos="fade-left" data-aos-duration="1000">AMD Ryzen™ 9 9950X Series processors
-            </p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-left" data-aos-duration="1000">The Fastest Gaming Processor the World has Ever Seen
-            </h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-            Learn more
-                <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/amd-7.jpg')}}" alt="AMD" class="absolute inset-0 w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-2"> <span class="text-[#ff4d00]">AMD Ryzen™</span> 7 9800X3D Desktop Processor</h2>
+            <div class="mb-4 text-lg">
+                <p>Enjoy faster gaming with 2nd gen AMD 3D V-Cache™ technology for low latency</p>
             </div>
-        </div>
+        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
-</section>
+</div>
 
-<!-- Ryzen 7 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="order-2 lg:order-1 lg:col-span-2">
-            <p class="text-sm font-semibold text-[#ff4d00] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">AMD Ryzen™ 7 9800X3D Desktop Processor</p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-right" data-aos-duration="1000">Enjoy faster gaming with 2nd gen AMD 3D V-Cache™ technology for low latency.</h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-            Learn more
-            <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/amd-ryzen-5-9600x.jpg')}}" alt="AMD" class="absolute inset-0 w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-2"> <span class="text-[#ff4d00]">AMD Ryzen™</span> 5 9600X</h2>
+            <div class="mb-4 text-lg">
+                <p>Pure Gaming Performance</p>
             </div>
-        </div>
-        <div class="order-1 lg:order-2 lg:col-span-3" data-aos="fade-up" data-aos-duration="1000">
-        <img src="{{asset('image/CPU/amd-7.jpg')}}" alt="Ryzen 7" class="w-full aspect-[580/285] object-cover rounded-2xl">
-        </div>
+        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
-</section>
+</div>
 
-<!-- Ryzen 5 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="lg:col-span-3" data-aos="fade-right" data-aos-duration="1000">
-        <img src="{{asset('image/CPU/amd-ryzen-5-9600x.jpg')}}" alt="Ryzen 5" class="w-full aspect-[580/285] object-cover rounded-2xl">
-        </div>
-        <div class="lg:col-span-2">
-            <p class="text-sm font-semibold text-[#ff4d00] tracking-wider uppercase" data-aos="fade-left" data-aos-duration="1000">AMD Ryzen™ 5 9600X</p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-left" data-aos-duration="1000">Pure Gaming Performance</h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-                Learn more
-            <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/Intel-Core-Ultra-9-285K.jpg')}}" alt="INTEL" class="absolute inset-0 w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-2"> <span class="text-[#009CFF]">Intel® Core™</span> Ultra 9 Processor 285K</h2>
+            <div class="mb-4 text-lg">
+                <p>Intel® Core™ Ultra processors and an available built-in Intel® Arc™ graphics are optimized to deliver great performance</p>
             </div>
-        </div>
+        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
-</section>
+</div>
 
-<!-- Intel Ultra 9 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="order-2 lg:order-1">
-            <p class="text-sm font-semibold text-[#009CFF] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">Intel® Core™ Ultra 9 Processor 285K</p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-right" data-aos-duration="1000">Intel® Core™ Ultra processors and an available built-in Intel® Arc™ graphics are optimized to deliver great performance.</h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-            Learn more
-            <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/intel-core-ultra-7-265k.jpg')}}" alt="INTEL" class="absolute inset-0 w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-2"> <span class="text-[#009CFF]">Intel® Core™</span> Ultra 7 Processor 265U</h2>
+            <div class="mb-4 text-lg">
+                <p>Modern Graphics for Powerful Performance and Stunning Displays</p>
             </div>
-        </div>
-        <div class="order-1 lg:order-2 w-full" data-aos="fade-up" data-aos-duration="1000">
-        <img src="{{asset('image/CPU/Intel-Core-Ultra-9-285K.jpg')}}" alt="Intel Ultra 9" class="w-full aspect-[580/285] object-cover rounded-2xl">
-        </div>
+        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
-</section>
+</div>
 
-<!-- Intel Ultra 7 -->
-<section class="diagonal-section bg-black text-white" data-aos="fade-down-left" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="w-full" data-aos="fade-right" data-aos-duration="1000">
-        <img src="{{asset('image/CPU/intel-core-ultra-7-265k.jpg')}}" alt="Intel Ultra 7" class="w-full aspect-[580/285] object-cover rounded-2xl">
-        </div>
-        <div class="order-2 lg:order-1">
-            <p class="text-sm font-semibold text-[#009CFF] tracking-wider uppercase" data-aos="fade-left" data-aos-duration="1000">Intel® Core™ Ultra 7 Processor 265U</p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-left" data-aos-duration="1000">Modern Graphics for Powerful Performance and Stunning Displays.</h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-            Learn more
-            <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
+<div class="relative w-full h-[500px] overflow-hidden">
+        <img src="{{asset('image/CPU/intel-14th-gen.jpg')}}" alt="Lenovo" class="absolute inset-0 w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-2"> <span class="text-[#009CFF]">Intel® Core™</span> Ultra 5 Processor 245T</h2>
+            <div class="mb-4 text-lg">
+                <p>Intel® Thread Director optimizes workload across performance and efficiency cores</p>
             </div>
-        </div>
+        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
-</section>
-
-<!-- Intel Ultra 5 -->
-<section class="diagonal-section reversed bg-black text-white" data-aos="fade-down-right" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 py-20">
-        <div class="order-2 lg:order-1">
-            <p class="text-sm font-semibold text-[#009CFF] tracking-wider uppercase" data-aos="fade-right" data-aos-duration="1000">Intel® Core™ Ultra 5 Processor 245T</p>
-            <h2 class="mt-2 text-3xl lg:text-4xl font-[poppins] font-extrabold leading-tight text-white" data-aos="fade-right" data-aos-duration="1000">Intel® Thread Director optimizes workload across performance and efficiency cores.</h2>
-            <div class="mt-8 flex items-center gap-6" data-aos="fade-up" data-aos-duration="1500">
-            <a href="#" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy</a>
-            <a href="#" class="text-white font-bold flex items-center group">
-            Learn more
-            <span class="ml-2 transition-transform duration-300 group-hover:translate-x-2">&gt;</span>
-            </a>
-            </div>
-        </div>
-            <div class="order-1 lg:order-2 w-full" data-aos="fade-up" data-aos-duration="1000">
-            <img src="{{asset('image/CPU/intel-14th-gen.jpg')}}" alt="Intel Ultra 5" class="w-full aspect-[580/285] object-cover rounded-2xl">
-            </div>
-    </div>
+</div>
 </section>
 
 </main>
