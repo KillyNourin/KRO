@@ -255,7 +255,7 @@
             <img src="{{asset('image/GPU/rt-on.png')}}" alt="After" oncontextmenu="return false;">
 
             <div class="label-off absolute bottom-4 left-4 z-20 text-white text-xl font-bold font-[poppins] uppercase tracking-wider px-3 py-1 transition-opacity duration-300 select-none">
-                RAYTRACING<span class="text-gray-400">OFF</span>
+                RAYTRACING<span class="text-gray-400"> OFF</span>
             </div>
 
             <div class="image-clipper">
@@ -263,7 +263,7 @@
             </div>
 
             <div class="label-on absolute bottom-4 right-4 z-20 text-white text-xl font-bold font-[poppins] uppercase tracking-wider px-3 py-1 transition-opacity duration-300 select-none">
-                RAYTRACING<span class="text-[#ff4d00]">ON</span>
+                RAYTRACING<span class="text-[#ff4d00]"> ON</span>
             </div>
 
             <!-- slidernya -->
