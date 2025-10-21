@@ -68,7 +68,7 @@
 
         <div class="menu-content" id="productivity-laptop">
           <div class="first-card">
-            <div class="img-placeholder"><img src="{{ asset('image/dell.jpg') }}" alt="Dell XPS 15"></div>
+            <div class="img-placeholder"><img src="{{ asset('image/dell.png') }}" alt="Dell XPS 15"></div>
             <div class="card-details">
               <h2 class="card-title">Dell XPS 15</h2>
               <p class="card-description">Perfect for productivity and portability</p>
@@ -79,7 +79,7 @@
           </div>
            <div class="thumbnail-cards">
             @for ($i = 1; $i <= 4; $i++)
-              <img class="thumbnail-image" src="{{ asset('image/dell.jpg') }}">
+              <img class="thumbnail-image" src="{{ asset('image/dell.png') }}">
             @endfor
           </div>
         </div>
@@ -115,7 +115,7 @@
           <div class="layer"><h3><a href="#">GAMING</a></h3></div>
         </div>
         <div class="category-col" data-aos="fade-up" data-aos-duration="1000">
-          <img src="{{ asset('image/dell.jpg') }}">
+          <img src="{{ asset('image/dell.png') }}">
           <div class="layer"><h3><a href="#">PRODUCTIVITY</a></h3></div>
         </div>
         <div class="category-col" data-aos="fade-right" data-aos-duration="1000">
