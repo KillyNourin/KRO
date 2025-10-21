@@ -16,55 +16,53 @@
 @include('partials.login')
 
 {{-- Main Product --}}
-<section class="relative w-full">
+<section class="relative w-full h-screen overflow-hidden">
+    <img src="{{ asset('image/Deals/banner-1.png') }}" 
+        alt="Deals Banner" 
+        class="absolute inset-0 w-full h-full object-cover">
+    
+    <div class="absolute inset-0 bg-black/20"></div>
 
-        <div class="w-full aspect-video sm:aspect-[16/5]">
-            <img src="{{ asset('image/Deals/banner-1.png') }}" alt="Deals Banner" class="w-full h-full object-cover">
-        </div>
-
-        <div class="absolute inset-0 bg-black/20"></div>
-
-        <div class="absolute inset-0 flex flex-col justify-center items-start p-8 sm:p-12 lg:p-24">
-            <div class="max-w-md text-white">
-                <div class="flex flex-col items-start">
-                    <p class="mb-1 text-sm sm:text-lg font-[poppins] font-bold text-[#8DB600]">RTX 3090 Founder Edition</p>
-                    <h1 class="text-3xl sm:text-4xl font-[poppins] font-bold text-white">Rp 12.999.000</h1>
-                    <p class="text-xl sm:text-2xl font-[poppins] text-gray-400 line-through">Rp 16.350.649</p>
-                </div>
-                <div class="mt-5">
-                    <a href="#" class="inline-block bg-white text-black font-bold text-lg py-3 px-10 rounded-full hover:bg-[#8DB600] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                        Buy Now
-                    </a>
-                </div>
+    <div class="relative z-10 flex flex-col justify-center items-start h-full p-8 sm:p-12 lg:p-24 text-white">
+        <div class="max-w-md">
+            <p class="mb-1 text-sm sm:text-lg font-[poppins] font-bold text-[#8DB600]">RTX 3090 Founder Edition</p>
+            <h1 class="text-3xl sm:text-5xl font-bold text-white">Rp 12.999.000</h1>
+            <p class="text-xl sm:text-2xl text-gray-400 line-through">Rp 16.350.649</p>
+            <div class="mt-5">
+                <a href="#" 
+                  class="inline-block bg-white text-black font-bold text-lg py-3 px-10 rounded-full hover:bg-[#8DB600] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                  Buy Now
+                </a>
             </div>
         </div>
+    </div>
 </section>
 
-<section class="relative w-full">
-        <div class="w-full aspect-video sm:aspect-[16/5]">
-            <img src="{{ asset('image/Deals/banner-2.jpg') }}" alt="Deals Banner" class="w-full h-full object-cover">
-        </div>
+{{-- RX 7900 XTX --}}
+<section class="relative w-full h-screen overflow-hidden">
+    <img src="{{ asset('image/Deals/banner-2.jpg') }}" 
+        alt="Deals Banner" 
+        class="absolute inset-0 w-full h-full object-cover">
+    
+    <div class="absolute inset-0 bg-black/30"></div>
 
-        <div class="absolute inset-0 bg-black/20"></div>
-
-        <div class="absolute inset-0 flex flex-col justify-center items-start p-8 sm:p-12 lg:p-24">
-            <div class="max-w-md text-white">
-                <div class="flex flex-col items-start">
-                    <p class="mb-1 text-sm sm:text-lg font-[poppins] font-bold text-[#ff4d00]">AMD Radeon RX 7900 XTX</p>
-                    <h1 class="text-3xl sm:text-4xl font-[poppins] font-bold text-white">Rp 14.500.000</h1>
-                    <p class="text-xl sm:text-2xl font-[poppins] text-gray-400 line-through">Rp 16.843.496</p>
-                </div>
-                <div class="mt-5">
-                    <a href="#" class="inline-block bg-white text-black font-bold text-lg py-3 px-10 rounded-full hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                        Buy Now
-                    </a>
-                </div>
+    <div class="relative z-10 flex flex-col justify-center items-start h-full p-8 sm:p-12 lg:p-24 text-white">
+        <div class="max-w-md">
+            <p class="mb-1 text-sm sm:text-lg font-[poppins] font-bold text-[#ff4d00]">AMD Radeon RX 7900 XTX</p>
+            <h1 class="text-3xl sm:text-5xl font-bold text-white">Rp 14.500.000</h1>
+            <p class="text-xl sm:text-2xl text-gray-400 line-through">Rp 16.843.496</p>
+            <div class="mt-5">
+                <a href="#" 
+                  class="inline-block bg-white text-black font-bold text-lg py-3 px-10 rounded-full hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                  Buy Now
+                </a>
             </div>
         </div>
+    </div>
 
-        <div class="absolute bottom-0 right-0 p-8 sm:p-12 lg:p-24">
-            <img src="{{ asset('image/Deals/amd-logo.png') }}" alt="AMD Logo" class="h-10 sm:h-12 w-auto">
-        </div>
+    <div class="absolute bottom-0 right-0 p-8 sm:p-12 lg:p-24">
+        <img src="{{ asset('image/Deals/amd-logo.png') }}" alt="AMD Logo" class="h-10 sm:h-12 w-auto">
+    </div>
 </section>
 
 {{-- Product --}}
