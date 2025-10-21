@@ -530,13 +530,14 @@ body.loaded {
   transition: 0.5s;
 }
 .layer:hover {
-  background: rgba(253, 70, 70, 0.7);
+  background: rgb(255, 255, 255, 0.5);
   /* background: rgba(0, 0, 255, 0.7); */
 }
 
 .layer h3 {
   width: 100%;
-  font-weight: 500;
+  font-family: poppins;
+  font-weight: 600;
   /* color: #fff; */
   font-size: 26px;
   bottom: 0;
@@ -546,12 +547,12 @@ body.loaded {
   transition: 0.5s;
 }
 .layer h3 a{
-  color: #fff;
+  color: #202020;
   text-decoration: none;
   cursor: pointer;
 }
 .layer h3 a:hover{
-  color: #fff;
+  color: #202020;
   text-decoration: underline;
   cursor: pointer;
 }
