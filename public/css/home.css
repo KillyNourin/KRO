@@ -179,6 +179,8 @@ body.loaded {
 }
 
 .hero-left h1 {
+  font-family: 'Poppins';
+  font-weight: 550;
   font-size: 3em;
   color: #333;
   margin-bottom: 20px;
@@ -209,7 +211,7 @@ body.loaded {
 }
 
 .hero-buttons .btn-primary:hover {
-  background-color: #555;
+  background-color: #009CFF;
 }
 
 .hero-buttons .btn-secondary {
@@ -224,7 +226,7 @@ body.loaded {
 }
 
 .hero-buttons .btn-secondary:hover {
-  background-color: #f0f0f0;
+  background-color: #009CFF;
 }
 
 /* Hero Right - Scroll Grid */
@@ -300,35 +302,60 @@ body.loaded {
     height: 320px;
   }
 }
-/* --- Featured Products Section --- */
-.containers {
-  background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  max-width: 1100px;
-  margin: 0 auto;
+
+/* Featured Products  */
+.featured-products {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+.featured-products h2 {
   text-align: center;
-}
-
-/* Judul utama */
-.containers h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  font-weight: 600;
   font-family: 'Poppins';
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
 }
 
-/* Tab Menu */
-.menu-nav {
+.featured-products .menu-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: 15px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
+
+.featured-products .menu-button {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.97em;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.featured-products .menu-button.active {
+  background: #111;
+  color: #fff;
+  font-weight: 550;
+}
+
+.featured-products .menu-button:hover {
+  background-color: #009CFF;
+  color: #fff;
+} 
+
+.menu-display {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .menu-content {
   display: none;
 }
@@ -336,163 +363,184 @@ body.loaded {
 .menu-content.active {
   display: block;
 }
-.menu-button {
-  background: none;
-  border: none;
-  font-size: 1em;
-  color: #555;
-  cursor: pointer;
+
+/* Carousel */
+.carousel {
   position: relative;
-  padding: 10px 15px;
+  overflow: hidden; /* biar efek hover nggak kepotong */
+  width: 100%;
+  padding: 20px 0;
 }
 
-.menu-button:hover {
-  color: #000;
-}
-
-.menu-button.active {
-  font-weight: bold;
-  color: #000;
-}
-
-.menu-button.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 3px;
-  background-color: #5c3b2e;
-  border-radius: 2px;
-}
-
-/* Card Besar */
-.menu-display {
+.carousel-track {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
 }
 
-.first-card {
-  display: flex;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.img-placeholder {
-  flex: 1;
+/* --- Product Card --- */
+.product-card {
   min-width: 260px;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: var(--background-color);
-  border-radius: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.img-placeholder img {
-  max-width: 100%;
-  max-height: 100%;
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
   object-fit: contain;
-  display: block;
-}
-.card-details {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #eaeaea;
-}
-
-.card-title {
-  font-size: 1.5em;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.card-description {
-  font-size: 1em;
-  color: #444;
+.product-card h3 {
+  font-size: 1.1em;
   margin-bottom: 5px;
+  color: #222;
 }
 
-.card-specs {
+.product-card p {
+  color: #555;
   font-size: 0.9em;
-  color: #666;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .buy-button {
-  background-color: #333;
+  background: #111;
   color: #fff;
   border: none;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 5px;
-  font-size: 0.95em;
-  margin-top: 15px;
-  align-self: flex-start;
+  font-size: 0.9em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .buy-button:hover {
-  background-color: #555;
+  background: #009CFF;
 }
 
-/* Thumbnail Cards */
-.thumbnail-cards {
+/* Carousel Buttons */
+.carousel-btn {
+  display: none !important; /* Nyembunyiin arrow lama */
+}
+
+/* Style Dot Pagination */
+.carousel-dots {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 25px;
+  height: 8px; 
+  background: #c4c4c4;
+  border-radius: 4px; 
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.carousel-dots .dot.active {
+  background: #111; 
+  width: 35px; 
+}
+
+.carousel-dots .dot:hover {
+  background: #555;
+}
+
+.carousel-track {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+  cursor: grab; 
+  user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.thumbnail-image {
-  width: 250px;         /* atur sesuai kebutuhan */
-  height: 250px;        /* tinggi tetap agar seragam */
-  object-fit: contain;  /* biar gambar muat tanpa terpotong */
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  background-color: #fff;
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .product-card {
+    min-width: 220px;
+  }
+
+  .product-card img {
+    height: 160px;
+  }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .first-card {
-    flex-direction: column;
+  .featured-products h2 {
+    font-size: 1.7em;
   }
 
-  .img-placeholder {
-    width: 100%;
-    height: auto; /* biar fleksibel sesuai gambar */
-    min-width: unset;
+  .carousel-track {
+    gap: 15px;
   }
 
-  .img-placeholder img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* atau cover jika ingin penuh */
+  .product-card {
+    min-width: 200px;
+    padding: 10px;
   }
 
-  .card-details {
-    text-align: center;
-    align-items: center;
-  }
-
-  .buy-button {
-    align-self: center;
+  .product-card img {
+    height: 140px;
   }
 }
+
+@media (max-width: 480px) {
+  .product-card {
+    min-width: 180px;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+}
+
+
 
 /* --- Categories Section --- */
+section.category {
+  background: linear-gradient(180deg, #f5f5f5 0%, #fafafa 100%);
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .category-magic{
+  background: transparent;
   padding-top: 80px;
 }
 .category-magic-n{
+  background: transparent;
   padding-top: 40px;
 }
 .row {
@@ -506,12 +554,14 @@ body.loaded {
   margin: auto;
   text-align: center;
   font-size: 3em;
+  font-weight: 550;
   font-family: 'Poppins';
   /* padding-top: 10px; */
 }
 .category-col {
   flex-basis: 32%;
   border-radius: 10px;
+  margin-top: 60px;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
@@ -536,8 +586,8 @@ body.loaded {
 
 .layer h3 {
   width: 100%;
-  font-family: poppins;
-  font-weight: 600;
+  font-family: 'Poppins';
+  font-weight: 550;
   /* color: #fff; */
   font-size: 26px;
   bottom: 0;
