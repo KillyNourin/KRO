@@ -16,8 +16,7 @@
     <div class="hero-container">
       <div class="hero-left" data-aos="fade-left" data-aos-duration="1000">
       <h1>Find Your Laptop,<br>Component Parts For Your PC Here, With Big Deals</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque quia perspiciatis, corporis quisquam natus 
-          reiciendis expedita magnam sed dolorum officiis nihil molestias amet! Quos cupiditate dolorum aut incidunt cumque.</p>
+      <p>Welcome to KorinTekno, the ultimate destination for high-quality laptops, powerful PC parts, and exclusive daily deals! We offer a wide selection from top brands at competitive prices, with official warranties and fast service. Whether you’re building your dream PC, upgrading your work laptop, or hunting for the latest gaming components, you’ll find everything herecomplete, reliable, and always with deals that help you save more!.</p>
       <div class="hero-buttons">
           <button class="btn-primary">Explore</button>
           <button class="btn-secondary">Sign In</button>
@@ -36,74 +35,75 @@
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="featured-products">
-    <div class="containers">
-      <h2 data-aos="fade-up" data-aos-duration="1000">Featured Products</h2>
-      <div class="menu-nav" data-aos="fade-right" data-aos-duration="1000">
-        <button class="menu-button active" data-menu="gaming-laptop">Gaming Laptop</button>
-        <button class="menu-button" data-menu="productivity-laptop">Productivity Laptop</button>
-        <button class="menu-button" data-menu="pc-components">PC & Components</button>
-      </div>
-
-      <div class="menu-display" data-aos="fade-left" data-aos-duration="1000">
-        <!-- Contoh tab product: gaming laptop -->
-       <div class="menu-content active" id="gaming-laptop">
-          <div class="first-card">
-            <div class="img-placeholder"><img src="{{ asset('image/gaming/gaming1.png') }}" alt="ASUS TUF GAMING A15"></div>
-            <div class="card-details">
-              <h2 class="card-title">ASUS TUF GAMING A15</h2>
-              <p class="card-description">Best Price for low budget gaming</p>
-              <p class="card-specs">RTX 4060 with 16GB VRAM</p>
-              <p class="card-specs">Ryzen 8000 series</p>
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-          <div class="thumbnail-cards">
-            @for ($i = 1; $i <= 4; $i++)
-              <img class="thumbnail-image" src="{{ asset('image/gaming/gaming1.png') }}">
-            @endfor
-          </div>
-        </div>
-
-        <div class="menu-content" id="productivity-laptop">
-          <div class="first-card">
-            <div class="img-placeholder"><img src="{{ asset('image/dell.png') }}" alt="Dell XPS 15"></div>
-            <div class="card-details">
-              <h2 class="card-title">Dell XPS 15</h2>
-              <p class="card-description">Perfect for productivity and portability</p>
-              <p class="card-specs">Intel Core i7 Gen 13th</p>
-              <p class="card-specs">32GB RAM, 1TB SSD</p>
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-           <div class="thumbnail-cards">
-            @for ($i = 1; $i <= 4; $i++)
-              <img class="thumbnail-image" src="{{ asset('image/dell.png') }}">
-            @endfor
-          </div>
-        </div>
-
-        <div class="menu-content" id="pc-components">
-          <div class="first-card">
-            <div class="img-placeholder"><img src="{{ asset('image/carousel.png') }}" alt="PC Parts"></div>
-            <div class="card-details">
-              <h2 class="card-title">NVIDIA RTX 4070 Ti</h2>
-              <p class="card-description">Ideal for high-end builds</p>
-              <p class="card-specs">12GB GDDR6X</p>
-              <p class="card-specs">DLSS 3.5 Ready</p>
-              <button class="buy-button">Buy</button>
-            </div>
-          </div>
-           <div class="thumbnail-cards">
-            @for ($i = 1; $i <= 4; $i++)
-              <img class="thumbnail-image" src="{{ asset('image/carousel.png') }}">
-            @endfor
-          </div>
-        </div>
-      </div>
+<section class="featured-products">
+  <div class="containers">
+    <h2 data-aos="fade-up" data-aos-duration="1000">Featured Products</h2>
+    <div class="menu-nav" data-aos="fade-right" data-aos-duration="1000">
+      <button class="menu-button active" data-menu="gaming-laptop">Gaming Laptop</button>
+      <button class="menu-button" data-menu="productivity-laptop">Productivity Laptop</button>
+      <button class="menu-button" data-menu="pc-components">PC & Components</button>
     </div>
-  </section>
+
+    <div class="menu-display" data-aos="fade-left" data-aos-duration="1000">
+      
+      <div class="menu-content active" id="gaming-laptop">
+        <div class="carousel">
+          <button class="carousel-btn prev">&#10094;</button>
+          <div class="carousel-track">
+            @foreach (['gaming2.png', 'gaming3.png', 'gaming4.png', 'gaming5.png', 'gaming6.png','gaming7.png', 'gaming10.png'] as $gaming)
+              <div class="product-card">
+                <img src="{{ asset('image/FeaturedProducts/' . $gaming) }}" alt="Gaming Laptop" draggable="false">
+                <h3>Gaming Laptop</h3>
+                <p>High-performance for every gamer.</p>
+                <button class="buy-button">Buy</button>
+              </div>
+            @endforeach
+          </div>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div> 
+      </div>
+
+      <div class="menu-content" id="productivity-laptop">
+        <div class="carousel">
+          <button class="carousel-btn prev">&#10094;</button>
+          <div class="carousel-track">
+            @foreach (['productivity1.png', 'productivity2.png', 'productivity3.png', 'productivity4.png', 'productivity5.png', 'productivity6.png'] as $work)
+              <div class="product-card">
+                <img src="{{ asset('image/FeaturedProducts/' . $work) }}" alt="Productivity Laptop" draggable="false">
+                <h3>Productivity Laptop</h3>
+                <p>Work efficiently anywhere you go.</p>
+                <button class="buy-button">Buy</button>
+              </div>
+            @endforeach
+          </div>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <div class="menu-content" id="pc-components">
+        <div class="carousel">
+          <button class="carousel-btn prev">&#10094;</button>
+          <div class="carousel-track">
+            @foreach (['cpu1.png', 'cpu3.png', 'cpu5.png', 'mb1.png', 'mb2.png', 'mb3.png', 'gpu1.png', 'gpu2.png', 'gpu3.png'] as $part)
+              <div class="product-card">
+                <img src="{{ asset('image/FeaturedProducts/' . $part) }}" alt="PC Component" draggable="false">
+                <h3>PC Component</h3>
+                <p>Upgrade your rig with the best parts.</p>
+                <button class="buy-button">Buy</button>
+              </div>
+            @endforeach
+          </div>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
 
   <!-- Category Section -->
   <section class="category" id="branch">

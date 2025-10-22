@@ -28,7 +28,7 @@
                     <p>The Fastest Gaming Processor the World has Ever Seen</p>
                     <p class="font-bold">Rp 7.847.555</p>
                 </div>
-            <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+            <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 
@@ -41,7 +41,7 @@
                 <p>Enjoy faster gaming with 2nd gen AMD 3D V-Cache™ technology for low latency</p>
                 <p class="font-bold">Rp 7.847.555 </p>
             </div>
-        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+        <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 
@@ -54,7 +54,7 @@
                 <p>Pure Gaming Performance</p>
                 <p class="font-bold">Rp 3.300.500</p>
             </div>
-        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+        <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#ff4d00] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 
@@ -67,7 +67,7 @@
                 <p>Intel® Core™ Ultra processors and an available built-in Intel® Arc™ graphics are optimized to deliver great performance</p>
                 <p class="font-bold">Rp 8.550.300</p>
             </div>
-        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+        <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 
@@ -80,7 +80,7 @@
                 <p>Modern Graphics for Powerful Performance and Stunning Displays</p>
                 <p class="font-bold">Rp 4.425.000</p>
             </div>
-        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+        <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 
@@ -93,7 +93,7 @@
                 <p>Intel® Thread Director optimizes workload across performance and efficiency cores</p>
                 <p class="font-bold">Rp 3.100.200</p>
             </div>
-        <a href="#" class="px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
+        <a href="#" class="px-6 py-2 rounded-md font-bold bg-white text-black hover:bg-[#009CFF] hover:text-white transition-all duration-300 transform hover:-translate-y-1">Buy Now</a>
     </div>
 </div>
 </section>
