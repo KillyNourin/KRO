@@ -39,20 +39,34 @@
         <div class="dropdown user-dropdown">
             <button class="dropdown-btn">
                 <img src="{{ Auth::user()->profile_photo ?? asset('image/p3.ico') }}" 
-                     alt="Profile" class="profile-pic">
+                    alt="Profile" class="profile-pic">
                 <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
+
             <div class="dropdown-menu">
                 <a href="#">Profil Saya</a>
-                <a href="{{ route('logout') }}"
-                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+
+                {{-- Tombol Logout --}}
+                <a href="#" id="logout-link">Logout</a>
+
+                {{-- Form Logout POST --}}
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
                     @csrf
                 </form>
             </div>
         </div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoutLink = document.getElementById("logout-link");
+            logoutLink.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.getElementById("logout-form").submit();
+            });
+        });
+        </script>
     @else
         {{-- Tombol Join tetap di dalam kontainer yang sama --}}
         <button class="join-btn" onclick="openAuthPopup()">Join</button>
