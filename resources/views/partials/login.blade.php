@@ -41,21 +41,35 @@
     <div class="form register-form">
       <div class="form-content">
         <header>SIGN UP</header>
-        <form action="#">
+          <form method="POST" action="{{ route('register.custom') }}">
+          @csrf
           <div class="field input-field">
-            <input type="email" placeholder="Email" class="input">
+            <input type="text" name="username" placeholder="Username" class="input" required>
           </div>
           <div class="field input-field">
-            <input type="password" placeholder="Create password" class="password">
+            <input type="number" name="phone" placeholder="Phone number" class="input" required>
           </div>
           <div class="field input-field">
-            <input type="password" placeholder="Confirm password" class="password">
+            <input type="password" name="password" placeholder="Create password" class="password" required>
+          </div>
+          <div class="field input-field">
+            <input type="password" name="password_confirmation" placeholder="Confirm password" class="password" required>
             <i class='bx bx-hide eye-icon'></i>
           </div>
+
           <div class="field button-field">
             <button type="submit">Signup</button>
           </div>
         </form>
+        @if ($errors->any())
+          <div style="color:red; margin-top:10px;">
+            <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        @endif
         <div class="form-link">
           <span>Already have an account? <a href="#" class="link switch-to-login">Login</a></span>
         </div>

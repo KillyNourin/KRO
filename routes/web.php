@@ -145,5 +145,7 @@ Route::get('/profile', function () {
 })->middleware('auth');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
+//register route
+Route::get('/register', [LoginController::class, 'showRegisterForm'])->name('register.form');
+Route::post('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/register', [LoginController::class, 'register'])->name('register.custom');
