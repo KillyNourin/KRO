@@ -24,9 +24,7 @@ This project is built using a modern technology stack, including:
     -   CSS3
     -   JavaScript
 -   **Development & Build Tools**:
-    -   [Vite.js](https://vitejs.dev/)
     -   [Composer](https://getcomposer.org/)
-    -   [NPM](https://www.npmjs.com/)
 -   **Libraries**:
     -   [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/)
     -   [Swiper JS](https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js)
