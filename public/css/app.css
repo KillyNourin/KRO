@@ -321,13 +321,91 @@ body.loaded { opacity: 1; }
 
 /* Footer */
 footer {
-  background: #111; color: #ccc;
-  padding: 40px 20px 20px;
+  background: #111;
+  color: #ccc;
+  padding: 60px 20px 30px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  border-top: 3px solid #3b3b3b;
+  position: relative;
+  z-index: 1; /* Pastikan di bawah navbar, tapi tetap tampil */
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.footer-logo span {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 .footer-columns {
-  display: flex; justify-content: center;
-  gap: 180px; flex-wrap: wrap; margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 140px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
-.footer-col a:hover { color: #fff; }
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 120px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border-bottom: 2px solid #009cff;
+  padding-bottom: 5px;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #009cff;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    border: none;
+  }
+}
