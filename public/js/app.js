@@ -41,40 +41,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && navMenu)
     hamburger.addEventListener('click', () => navMenu.classList.toggle('show'));
 
-  // ✅ Dropdown behavior (klik desktop, klik dua kali di mobile)
-  const dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(dropdown => {
-    const btn = dropdown.querySelector('.dropdown-btn');
-    const menu = dropdown.querySelector('.dropdown-menu');
-    let tapped = false;
+  // ✅ Dropdown toggle fix — klik dua kali di mobile, hover di desktop
+const dropdownButtons = document.querySelectorAll('.dropdown > .dropdown-btn');
 
-    btn.addEventListener('click', (e) => {
-      // Mobile mode
-      if (window.innerWidth <= 768) {
-        if (!tapped) {
-          e.preventDefault();
-          tapped = true;
-          dropdown.classList.add('open');
-          setTimeout(() => tapped = false, 1200);
-        } else {
-          tapped = false;
-          dropdown.classList.remove('open');
-        }
-      } else {
-        // Desktop mode
+dropdownButtons.forEach(btn => {
+  let firstClick = false;
+
+  btn.addEventListener('click', (e) => {
+    const menu = btn.nextElementSibling;
+
+    if (window.innerWidth <= 768) {
+      // Mobile — klik pertama buka menu, klik kedua pilih item
+      if (!menu.classList.contains('show') && !firstClick) {
         e.preventDefault();
-        const isOpen = menu.classList.contains('show');
-        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
-        if (!isOpen) menu.classList.add('show');
+        firstClick = true;
+        menu.classList.add('show');
+        setTimeout(() => firstClick = false, 800); // reset klik setelah 0.8 detik
+      } else {
+        menu.classList.remove('show');
       }
-    });
-  });
-
-  // Klik di luar untuk menutup dropdown
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
-      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    } else {
+      // Desktop — toggle dengan klik (opsional selain hover)
+      e.preventDefault();
+      menu.classList.toggle('show');
     }
   });
+});
+
+// Tutup dropdown jika klik di luar
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  }
+});
 });
