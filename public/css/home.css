@@ -227,6 +227,7 @@ body.loaded {
 
 .hero-buttons .btn-secondary:hover {
   background-color: #009CFF;
+  color: #ffff;
 }
 
 /* Hero Right - Scroll Grid */
