@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Fade out link
+  // Fade transition
   document.body.classList.add('loaded');
   const links = document.querySelectorAll('a[href]');
   links.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 400);
+      setTimeout(() => window.location.href = this.href, 400);
     });
   });
 
-  // Login popup
+  // Popup login handler
   const popupWrapper = document.querySelector('.auth-popup-wrapper');
   const authPopup = document.querySelector('.auth-popup');
   const joinButton = document.querySelector('.join-btn');
   const closeBtn = document.querySelector('.auth-close');
-
   const loginForm = authPopup?.querySelector('.login-form');
   const registerForm = authPopup?.querySelector('.register-form');
   const switchToRegister = authPopup?.querySelector('.switch-to-register');
@@ -29,52 +26,54 @@ document.addEventListener('DOMContentLoaded', () => {
       loginForm.classList.add('active');
       registerForm.classList.remove('active');
     });
-
-    closeBtn?.addEventListener('click', () => {
-      popupWrapper.classList.add('hidden');
+    closeBtn?.addEventListener('click', () => popupWrapper.classList.add('hidden'));
+    switchToRegister?.addEventListener('click', e => {
+      e.preventDefault(); loginForm.classList.remove('active'); registerForm.classList.add('active');
     });
-
-    switchToRegister?.addEventListener('click', (e) => {
-      e.preventDefault();
-      loginForm.classList.remove('active');
-      registerForm.classList.add('active');
-    });
-
-    switchToLogin?.addEventListener('click', (e) => {
-      e.preventDefault();
-      registerForm.classList.remove('active');
-      loginForm.classList.add('active');
-    });
-
-    // Password toggle
-    document.querySelectorAll(".eye-icon").forEach(eyeIcon => {
-      eyeIcon.addEventListener("click", () => {
-        const passwordFields = eyeIcon.closest(".input-field").querySelectorAll(".password");
-        passwordFields.forEach(password => {
-          if (password.type === "password") {
-            password.type = "text";
-            eyeIcon.classList.replace("bx-hide", "bx-show");
-          } else {
-            password.type = "password";
-            eyeIcon.classList.replace("bx-show", "bx-hide");
-          }
-        });
-      });
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === popupWrapper) {
-        popupWrapper.classList.add('hidden');
-      }
+    switchToLogin?.addEventListener('click', e => {
+      e.preventDefault(); registerForm.classList.remove('active'); loginForm.classList.add('active');
     });
   }
 
-  // ✅ Hamburger menu toggle
+  // Hamburger toggle
   const hamburger = document.getElementById('hamburger-btn');
   const navMenu = document.getElementById('nav-menu');
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
+  if (hamburger && navMenu)
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+  // ✅ Dropdown toggle fix — klik dua kali di mobile, hover di desktop
+const dropdownButtons = document.querySelectorAll('.dropdown > .dropdown-btn');
+
+dropdownButtons.forEach(btn => {
+  let firstClick = false;
+
+  btn.addEventListener('click', (e) => {
+    const menu = btn.nextElementSibling;
+
+    if (window.innerWidth <= 768) {
+      // Mobile — klik pertama buka menu, klik kedua pilih item
+      if (!menu.classList.contains('show') && !firstClick) {
+        e.preventDefault();
+        firstClick = true;
+        menu.classList.add('show');
+        setTimeout(() => firstClick = false, 800); // reset klik setelah 0.8 detik
+      } else {
+        menu.classList.remove('show');
+      }
+    } else {
+      // Desktop — toggle dengan klik (opsional selain hover)
+      e.preventDefault();
+      menu.classList.toggle('show');
+    }
+  });
+});
+
+// Tutup dropdown jika klik di luar
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
     });
   }
+});
 });

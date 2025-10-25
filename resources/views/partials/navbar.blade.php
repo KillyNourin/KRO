@@ -4,11 +4,9 @@
             <img src="/image/logo1.png" alt="Logo">
             <span>KorinTekno</span>
         </div>
-
         <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
             ☰
         </button>
-
         <div class="nav-links" id="nav-menu">
             <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
             <a href="/laptop" class="{{ request()->is('laptop') ? 'active' : '' }}">Laptop</a>
